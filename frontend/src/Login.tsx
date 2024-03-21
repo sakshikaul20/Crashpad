@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { TextField, Button, Box, Typography, Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import loginBG from './images/loginBG.jpg';
-import logoImage from './images/CPlogo1.png';
+import loginBG from './images/loginBG5.jpg';
+import logoImage from './images/CPlogo.png';
 
 const RootContainer = styled('div')({
   height: '100vh',

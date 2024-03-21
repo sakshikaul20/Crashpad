@@ -11,21 +11,31 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import { styled } from '@mui/material/styles';
 
 // Import your logo image here
-import logoImage from '../../images/CPlogo1.png';
+import logoImage from '../../images/CPlogo.png';
 
 
+const StyledListItem = styled(ListItem)({
+    justifyContent: 'center',
+    // '& .MuiListItemIcon-root' : {
+    //   minWidth: 'initial'
+    // }
+
+  });
+  
 const StyledListItemIcon = styled(ListItemIcon)({
-    justifyContent: 'center', // Center horizontally in the flex container
-    minWidth: '0', // Override Material-UI's default minWidth
-    marginRight: '55px', // This combined with marginLeft auto will center the icon
-    marginLeft: '55px'
+    // justifyContent: 'center', // Center horizontally in the flex container
+    // minWidth: '0', // Override Material-UI's default minWidth
+    // marginRight: '55px', // This combined with marginLeft auto will center the icon
+    // marginLeft: '55px',
+    minWidth: 'initial'
+
   });
 
 const DrawerHeader = styled('div')({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '20px'
+  padding: '8px'
 });
 
 const SideNav: React.FC = () => {
@@ -33,54 +43,55 @@ const SideNav: React.FC = () => {
     <Drawer
       variant="permanent"
       anchor="left"
-      sx={{
-        width: 240,
-        '& .MuiDrawer-paper': { width: 140, boxSizing: 'border-box' },
-      }}
+      // sx={{
+      //   width: 240,
+      //   '& .MuiDrawer-paper': { width: 140, boxSizing: 'border-box' },
+      // }}
     >
       <DrawerHeader>
-        <img src={logoImage} alt="Logo" style={{ maxWidth: '100%', maxHeight: '100px' }} />
+        {/* <img src={logoImage} alt="Logo" style={{ maxWidth: '100%', maxHeight: '100px' }} /> */}
+        <img src={logoImage} alt="Logo" style={{ width: '80px', maxHeight: '80px' }} />
       </DrawerHeader>
       <Divider />
       <List>
         {/* Dashboard Link */}
-        <ListItem  component={Link} to="/dashboard">
-          <ListItemIcon>
+        <StyledListItem  component={Link} to="/dashboard">
+          <StyledListItemIcon>
             <DashboardIcon />
-          </ListItemIcon>
+          </StyledListItemIcon>
           {/* <ListItemText primary="Dashboard" /> */}
-        </ListItem>
+        </StyledListItem>
         {/* Other Links */}
-        <ListItem >
-          <ListItemIcon>
+        <StyledListItem >
+          <StyledListItemIcon>
             <HomeIcon />
-          </ListItemIcon>
+          </StyledListItemIcon>
           {/* <ListItemText primary="Home" /> */}
-        </ListItem>
-        <ListItem >
-          <ListItemIcon>
+        </StyledListItem>
+        <StyledListItem >
+          <StyledListItemIcon>
             <FavoriteIcon />
-          </ListItemIcon>
+          </StyledListItemIcon>
           {/* <ListItemText primary="Favorites" /> */}
-        </ListItem>
-        <ListItem >
-          <ListItemIcon>
+        </StyledListItem>
+        <StyledListItem >
+          <StyledListItemIcon>
             <EmailIcon />
-          </ListItemIcon>
+          </StyledListItemIcon>
           {/* <ListItemText primary="Messages" /> */}
-        </ListItem>
-        <ListItem >
-          <ListItemIcon>
+        </StyledListItem>
+        <StyledListItem >
+          <StyledListItemIcon>
             <EventIcon />
-          </ListItemIcon>
+          </StyledListItemIcon>
           {/* <ListItemText primary="Trips" /> */}
-        </ListItem>
-        <ListItem >
-          <ListItemIcon>
+        </StyledListItem>
+        <StyledListItem >
+          <StyledListItemIcon>
             <SettingsIcon />
-          </ListItemIcon>
+          </StyledListItemIcon>
           {/* <ListItemText primary="Settings" /> */}
-        </ListItem>
+        </StyledListItem>
       </List>
     </Drawer>
   );
