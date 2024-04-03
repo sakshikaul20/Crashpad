@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { TextField, Button, Box, Typography, Link } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { TextField, Button, Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import loginBG from './images/loginBG5.jpg';
 import logoImage from './images/CPlogo.png';
@@ -72,7 +73,7 @@ const App: React.FC = () => {
             Login
           </LoginButton>
           <Typography variant="body2" style={{ marginTop: '1em' }}>
-            {/* New to Crashpad? <Link to="/SignUp" style={{ textDecoration: 'none' }}>Sign up here</Link> */}
+            New to Crashpad?<Link to="/SignUp" style={{ textDecoration: 'none' }}>Sign up here</Link>
           </Typography>
         </form>
       </LoginBox>
