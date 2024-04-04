@@ -17,7 +17,7 @@ const properties = Array(18).fill({
   rating: "4.9",
 });
 
-const PropertyCard = ({ property }) => (
+const PropertyCard: React.FC<any> = ({ property }) => (
   <Card sx={{ maxWidth: 345, position: 'relative' }}>
     <CardMedia
       component="img"

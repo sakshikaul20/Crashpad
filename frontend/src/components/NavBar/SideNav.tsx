@@ -38,7 +38,7 @@ const DrawerHeader = styled('div')({
   padding: '8px'
 });
 
-const SideNav: React.FC = () => {
+const SideNav: React.FC<any> = () => {
   return (
     <Drawer
       variant="permanent"
@@ -55,7 +55,8 @@ const SideNav: React.FC = () => {
       <Divider />
       <List>
         {/* Dashboard Link */}
-        <StyledListItem  component={Link} to="/dashboard">
+        <StyledListItem >
+        {/* <StyledListItem  component={Link} to="/dashboard"> */}
           <StyledListItemIcon>
             <DashboardIcon />
           </StyledListItemIcon>

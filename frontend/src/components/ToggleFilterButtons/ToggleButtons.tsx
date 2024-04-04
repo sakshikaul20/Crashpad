@@ -4,7 +4,7 @@ import { ToggleButton, ToggleButtonGroup } from '@mui/material';
 const FilterButtons = () => {
   const [alignment, setAlignment] = React.useState('25');
 
-  const handleAlignment = (event, newAlignment) => {
+  const handleAlignment = (event:any, newAlignment:any) => {
     setAlignment(newAlignment);
   };
 

@@ -7,7 +7,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import SearchIcon from '@mui/icons-material/Search';
 
-const UserSettings = () => {
+const UserSettings: React.FC<any> = () => {
   // State for menu anchor
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -16,7 +16,7 @@ const UserSettings = () => {
   const [search, setSearch] = useState('');
 
   // Handle opening the menu
-  const handleMenu = (event) => {
+  const handleMenu = (event:any) => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -26,7 +26,7 @@ const UserSettings = () => {
   };
 
   // Handle search input changes
-  const handleSearch = (event) => {
+  const handleSearch = (event:any) => {
     setSearch(event.target.value);
   };
 

@@ -26,11 +26,11 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   },
 }));
 
-const SearchAndToggleBar = () => {
+const SearchAndToggleBar: React.FC<any> = () => {
   const [search, setSearch] = useState('');
   const [selectedToggle, setSelectedToggle] = useState(null);
 
-  const handleToggle = (event, newToggle) => {
+  const handleToggle = (event:any, newToggle:any) => {
     setSelectedToggle(newToggle);
   };
   const toggleStyle = {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Container, TextField, Button, Checkbox, FormControlLabel, Typography, Link } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import loginBG from './images/loginBG5.jpg';
-import logoImage from './images/CPlogo.png';
+import loginBG from './images/loginBG.jpg';
+import logoImage from './images/CPlogo1.png';
 
 const RootContainer = styled('div')({
   height: '100vh',
@@ -45,7 +45,7 @@ const AccountType = styled('div')({
   margin: '1em 0',
 });
 
-const SignupForm: React.FC = () => {
+const Signup: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -59,67 +59,67 @@ const SignupForm: React.FC = () => {
 
   return (
     <RootContainer>
-    <SignupContainer>
-      <SignupBox>
-      <img src={logoImage} alt="Crashpad Logo" style={{ width: '50%', height: 'auto', marginLeft: '6em' }} />
-        {/* <Typography variant="h4" gutterBottom>Sign Up</Typography> */}
-        
-        <TextField
-          fullWidth
-          margin="normal"
-          id="name"
-          label="Name"
-          variant="outlined"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          id="email"
-          label="Email Address"
-          variant="outlined"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <TextField
-          fullWidth
-          margin="normal"
-          id="password"
-          label="Password"
-          type="password"
-          variant="outlined"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <SignupContainer>
+        <SignupBox>
+        <img src={logoImage} alt="Crashpad Logo" style={{ width: '50%', height: 'auto', marginLeft: '6em' }} />
+            {/* <Typography variant="h4" gutterBottom>Sign Up</Typography> */}
+            
+            <TextField
+            fullWidth
+            margin="normal"
+            id="name"
+            label="Name"
+            variant="outlined"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            />
+            <TextField
+            fullWidth
+            margin="normal"
+            id="email"
+            label="Email Address"
+            variant="outlined"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+            fullWidth
+            margin="normal"
+            id="password"
+            label="Password"
+            type="password"
+            variant="outlined"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            />
 
-        <AccountType>
-          <FormControlLabel
-            control={<Checkbox checked={isTraveller} onChange={(e) => setIsTraveller(e.target.checked)} />}
-            label="Traveller"
-          />
-          <Typography variant="body1">Or</Typography>
-          <FormControlLabel
-            control={<Checkbox checked={isHost} onChange={(e) => setIsHost(e.target.checked)} />}
-            label="Host"
-          />
-        </AccountType>
+            <AccountType>
+            <FormControlLabel
+                control={<Checkbox checked={isTraveller} onChange={(e) => setIsTraveller(e.target.checked)} />}
+                label="Traveller"
+            />
+            <Typography variant="body1">Or</Typography>
+            <FormControlLabel
+                control={<Checkbox checked={isHost} onChange={(e) => setIsHost(e.target.checked)} />}
+                label="Host"
+            />
+            </AccountType>
 
-        <SignUpButton
-          fullWidth
-          variant="contained"
-          onClick={handleSignUp}
-        >
-          Create account
-        </SignUpButton>
-        
-        <Typography variant="body2" style={{ marginTop: '1em', textAlign: 'center' }}>
-          Existing user? <Link href="/login" underline="none">Login</Link>
-        </Typography>
-      </SignupBox>
-    </SignupContainer>
+            <SignUpButton
+            fullWidth
+            variant="contained"
+            onClick={handleSignUp}
+            >
+            Create account
+            </SignUpButton>
+            
+            <Typography variant="body2" style={{ marginTop: '1em', textAlign: 'center' }}>
+            Existing user? <Link href="/login" underline="none">Login</Link>
+            </Typography>
+        </SignupBox>
+        </SignupContainer>
     </RootContainer>
   );
 }
 
-export default SignupForm;
+export default Signup;
