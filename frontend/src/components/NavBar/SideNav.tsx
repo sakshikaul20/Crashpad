@@ -35,7 +35,7 @@ const SideNav: React.FC = () => {
       anchor="left"
       sx={{
         width: 240,
-        '& .MuiDrawer-paper': { width: 140, boxSizing: 'border-box' },
+        '& .MuiDrawer-paper': { width: 100, boxSizing: 'border-box' },
       }}
     >
       <DrawerHeader>

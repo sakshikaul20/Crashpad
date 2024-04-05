@@ -5,7 +5,7 @@ import loginBG from './images/loginBG.jpg';
 import logoImage from './images/CPlogo1.png';
 
 const RootContainer = styled('div')({
-  height: '100vh',
+  height: '100vh', 
   width: '100vw',
   backgroundImage: `url(${loginBG})`,
   backgroundSize: 'cover',
