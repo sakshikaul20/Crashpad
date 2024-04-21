@@ -6,7 +6,7 @@ import logoImage from './images/CPlogo.png';
 import { useNavigate } from 'react-router-dom';
 
 const RootContainer = styled('div')({
-  height: '100vh',
+  height: '100vh', 
   width: '100vw',
   backgroundImage: `url(${loginBG})`,
   backgroundSize: 'cover',
