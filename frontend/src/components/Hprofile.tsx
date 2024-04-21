@@ -17,8 +17,8 @@ const Hprofile: React.FC = () => {
     // Add other properties as needed
   }
 
-   // State to keep track of selected property
-   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
+  //  // State to keep track of selected property
+  //  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
 
 
    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,15 +33,15 @@ const Hprofile: React.FC = () => {
    };
  
    // Handler to select a property
-   const handlePropertySelection = (property: any) => {
-     setSelectedProperty(property);
-   };
+  //  const handlePropertySelection = (property: any) => {
+  //    setSelectedProperty(property);
+  //  };
 
    return (
     <Card>
       <CardHeader
         title="Host Profile"
-        // You can add subheader with additional information if needed
+
       />
       <CardContent>
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -83,7 +83,7 @@ const Hprofile: React.FC = () => {
         </Button>
       </CardContent>
 
-      {/* Display selected property */}
+      {/* Display selected property
       {selectedProperty && (
         <CardContent>
           <Typography variant="h6">Selected Property</Typography>
@@ -91,8 +91,8 @@ const Hprofile: React.FC = () => {
             <img src={selectedProperty.image} alt={selectedProperty.description} style={{ width: '100px', height: '100px' }} />
             <Typography>{selectedProperty.description}</Typography>
           </div>
-        </CardContent>
-      )}
+        </CardContent> */}
+      {/* )} */}
     </Card>
   );
 };
