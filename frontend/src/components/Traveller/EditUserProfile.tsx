@@ -7,6 +7,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { FlashOffOutlined } from "@mui/icons-material";
+import ResponsiveAppBar from "../Navbar";
 
 
 
@@ -42,7 +44,7 @@ const UserProfile: React.FC = () => {
     });
     
     const [errors, setErrors] = useState<any>();
-    const [showUserProfile, setShowUserProfile] = useState(true);
+    const [showUserProfile, setShowUserProfile] = useState(false);
 
     
     
@@ -94,26 +96,19 @@ const UserProfile: React.FC = () => {
         setProfileFormData({...profileFormData, [name]:value});
       }
 
-      // const handleChanges = (event: SelectChangeEvent) => {
-      //   setAge(event.target.value as string);
-      // };
     
 
-      const handleShowProfile = () => {
-        // alert("Show profile");
-        setShowUserProfile(true);
-      }
 
     return (
         <>
-          <Grid container spacing={2}>
+        <ResponsiveAppBar></ResponsiveAppBar>
+          <Grid container spacing={2} margin= {'7em'}>
               <Grid xs={4} >
                   <img src='myprofile.jpeg' style={{ width: "100%", borderRadius: "20px" }} />
                   
               </Grid>
               {
-              showUserProfile ? 
-              (<ShowUserProfile profileFormData={profileFormData}  onClickEdit={handleShowProfile}></ShowUserProfile>) : 
+              
               (<Grid sx={{ mr:2,ml:2 }} >
               <form noValidate autoComplete="off" onSubmit={profileSubmitData}>
                   <TextField
@@ -180,22 +175,6 @@ const UserProfile: React.FC = () => {
                     </Select>
                   </FormControl>
 
-
-                  {/* <TextField
-                      fullWidth
-                      margin="normal"
-                      select
-                      id="gender"
-                      label="Gender"
-                      variant="outlined"
-                      onChange={handleChange} 
-                      helperText={errors ? errors.gender : ""}
-                  >
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                  </TextField> */}
                   </SideBySide>
                   
                   <TextField

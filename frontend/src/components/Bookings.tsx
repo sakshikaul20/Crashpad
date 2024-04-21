@@ -2,10 +2,9 @@ import React from "react";
 import ResponsiveAppBar from './Navbar';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import UserProfile from "./Booking/UserProfile";
-import Accommodation from "./Booking/Accommodation";
-import BasicTabs from "./Booking/CustomTabs";
-import CurrentBooking from "./Booking/CurrentBooking";
+import BasicTabs from "./Traveller/CustomTabs";
+import ShowAccomodation from "./Traveller/ShowAccomodation";
+import ShowUserProfile from "./Traveller/ShowUserProfile";
 
 
 const Booking: React.FC = () => {
@@ -13,13 +12,13 @@ const Booking: React.FC = () => {
     return (
         <>
           <ResponsiveAppBar></ResponsiveAppBar>
-          <Box sx={{ flexGrow: 1, m:5, }} >
+          <Box sx={{ flexGrow: 1, m:5, marginLeft: '8em'}} >
               <Grid container spacing={1}>
                   <Grid item xs={6}>
-                      <UserProfile></UserProfile>
+                    <ShowUserProfile></ShowUserProfile>
                   </Grid>
                   <Grid item xs={6}>
-                      <Accommodation></Accommodation>
+                    <ShowAccomodation></ShowAccomodation>
                   </Grid>
               </Grid>
             <BasicTabs></BasicTabs>
