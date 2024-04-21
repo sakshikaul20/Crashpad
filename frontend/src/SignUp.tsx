@@ -3,6 +3,7 @@ import { Container, TextField, Button, Checkbox, FormControlLabel, Typography, L
 import { styled } from '@mui/material/styles';
 import loginBG from './images/loginBG5.jpg';
 import logoImage from './images/CPlogo.png';
+import { useNavigate } from 'react-router-dom';
 
 const RootContainer = styled('div')({
   height: '100vh',
@@ -20,7 +21,7 @@ const SignupContainer = styled(Container)({
   height: '100%',
   backgroundColor: 'rgba(255, 255, 255, 0.8)',
   padding: '2em',
-  borderRadius: '8px',
+  borderRadius: '0px',
   boxShadow: '0 3px 5px rgba(0,0,0,0.2)',
   paddingTop: '0vh',
   marginLeft: '0vw', // Adjust as necessary for your layout
@@ -52,9 +53,13 @@ const SignupForm: React.FC = () => {
   const [isTraveller, setIsTraveller] = useState(false);
   const [isHost, setIsHost] = useState(false);
 
+  const navigate = useNavigate(); // hook to access the navigation function
+
   const handleSignUp = () => {
-    // Implement your sign-up logic here
-    console.log(name, email, password, isTraveller, isHost);
+    // Here you would handle the login logic
+
+    // After login logic, redirect to the dashboard
+    navigate('/dashboard'); // Replace '/dashboard' with the path to your dashboard
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { TextField, Button, Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import loginBG from './images/loginBG5.jpg';
@@ -22,7 +22,7 @@ const LoginBox = styled(Box)({
   height: '100%',
   backgroundColor: 'rgba(255, 255, 255, 0.8)',
   padding: '2em',
-  borderRadius: '8px',
+  borderRadius: '0px',
   boxShadow: '0 3px 5px rgba(0,0,0,0.2)',
   paddingTop: '30vh',
   marginLeft: '0vw', // Adjust as necessary for your layout
@@ -35,9 +35,14 @@ const LoginButton = styled(Button)({
 const App: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
+  const navigate = useNavigate(); // hook to access the navigation function
 
   const handleLogin = () => {
-    console.log(email, password);
+    // Here you would handle the login logic
+
+    // After login logic, redirect to the dashboard
+    navigate('/dashboard'); // Replace '/dashboard' with the path to your dashboard
   };
 
   return (

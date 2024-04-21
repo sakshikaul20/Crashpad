@@ -64,24 +64,24 @@ const SearchAndToggleBar = () => {
         <ToggleButton value="baths" aria-label="baths" sx={{ '&.Mui-selected, &.Mui-selected:hover': { backgroundColor: 'darkorange', color: 'white' }, ml: 2 }}>
           <BathtubIcon />
         </ToggleButton>
-        <ToggleButton value="bar" aria-label="bar">
+        <ToggleButton value="bar" aria-label="bar" sx={{ '&.Mui-selected, &.Mui-selected:hover': { backgroundColor: 'darkorange', color: 'white' } }}>
           <LocalBarIcon />
         </ToggleButton>
-        <ToggleButton value="restaurant" aria-label="restaurant">
+        <ToggleButton value="restaurant" aria-label="restaurant" sx={{ '&.Mui-selected, &.Mui-selected:hover': { backgroundColor: 'darkorange', color: 'white' } }}>
           <RestaurantIcon />
         </ToggleButton>
-        <ToggleButton value="wifi" aria-label="wifi">
+        <ToggleButton value="wifi" aria-label="wifi" sx={{ '&.Mui-selected, &.Mui-selected:hover': { backgroundColor: 'darkorange', color: 'white' } }}>
           <WifiIcon />
         </ToggleButton>
-        <ToggleButton value="pets" aria-label="pets">
+        <ToggleButton value="pets" aria-label="pets" sx={{ '&.Mui-selected, &.Mui-selected:hover': { backgroundColor: 'darkorange', color: 'white' } }}>
           <PetsIcon />
         </ToggleButton>
-        <ToggleButton value="car" aria-label="car">
+        <ToggleButton value="car" aria-label="car" sx={{ '&.Mui-selected, &.Mui-selected:hover': { backgroundColor: 'darkorange', color: 'white' } }}>
           <DirectionsCarIcon />
         </ToggleButton>
-        <ToggleButton value="fitness" aria-label="fitness">
+        {/* <ToggleButton value="fitness" aria-label="fitness" sx={{ '&.Mui-selected, &.Mui-selected:hover': { backgroundColor: 'darkorange', color: 'white' } }}>
           <FitnessCenterIcon />
-        </ToggleButton>
+        </ToggleButton> */}
       </StyledToggleButtonGroup>
       <Box sx={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '8px' }}>
         <Button variant="text">List</Button>

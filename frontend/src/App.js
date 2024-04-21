@@ -6,10 +6,11 @@ import SideNav from './components/NavBar/SideNav.tsx'
 import SearchBar from './components/Search/SearchBar.tsx';
 import ToggleButtons from './components/ToggleFilterButtons/ToggleButtons.tsx';
 import { Grid } from '@mui/material';
-import PropertyCards from './components/Dashboard/PropertyCards.tsx';
-import PropertyGrid from './components/Dashboard/PropertyCards.tsx';
+import PropertyCards from './components/Dashboard/Dashboard.tsx';
+import PropertyGrid from './components/Dashboard/Dashboard.tsx';
 import SearchAndToggleBar from './components/Dashboard/SearchAndToggleBar.tsx';
 import UserSettings from './components/Dashboard/UserSettings.tsx';
+import Dashboard from './components/Dashboard/Dashboard.tsx';
 
 
 const properties = [
@@ -22,20 +23,19 @@ function App() {
   return (
     <BrowserRouter>
      <div>
-     {/* <Login/> */}
-    {/* <SignUp/> */}
+    
+    {/* <UserSettings/>
     <SideNav/>
-    {/* <SearchBar/> */}
-    <ToggleButtons/>
-    <UserSettings/>
     <SearchAndToggleBar/>
     
-     <PropertyGrid/>
+     <PropertyGrid/> */}
      
-     {/* <Routes>
+     <Routes>
         <Route path= '/' element= {<Login/>}></Route>
         <Route path= '/signup' element= {<Signup/>}></Route>
-     </Routes> */}
+        <Route path= '/dashboard' element= {<Dashboard/>}></Route>
+     </Routes>
+     
     </div>
     </BrowserRouter>
   )

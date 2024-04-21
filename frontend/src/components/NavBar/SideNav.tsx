@@ -27,7 +27,8 @@ const StyledListItemIcon = styled(ListItemIcon)({
     // minWidth: '0', // Override Material-UI's default minWidth
     // marginRight: '55px', // This combined with marginLeft auto will center the icon
     // marginLeft: '55px',
-    minWidth: 'initial'
+    minWidth: 'initial',
+    padding: '10px'
 
   });
 
@@ -55,7 +56,7 @@ const SideNav: React.FC = () => {
       <Divider />
       <List>
         {/* Dashboard Link */}
-        <StyledListItem  component={Link} to="/dashboard">
+        <StyledListItem  components={Link} to="/dashboard">
           <StyledListItemIcon>
             <DashboardIcon />
           </StyledListItemIcon>

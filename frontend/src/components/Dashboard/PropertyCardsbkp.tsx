@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Card, CardMedia, CardContent, Typography, IconButton, CardActions, Box } from '@mui/material';
+import { Grid, Card, CardMedia, CardContent, Typography, IconButton, CardActions, Box, Collapse } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import cardImage from '../../images/loginBG5.jpg';
@@ -61,6 +61,20 @@ const PropertyCard = ({ property }) => (
     </CardContent>
   </Card>
 );
+ {/* Expandable section */}
+ {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
+//  <CardContent>
+//    {/* Add your additional images, calendar, and reservation info here */}
+//    <Typography paragraph>More images and details here...</Typography>
+//    {/* Placeholder for a calendar */}
+//    <Typography paragraph>Calendar will be here</Typography>
+//    {/* Placeholder for reservation info */}
+//    <Typography paragraph>Reservation info here...</Typography>
+//  </CardContent>
+// </Collapse>
+// </Card> */}
+
+
 
 
 
