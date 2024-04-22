@@ -24,7 +24,7 @@ const PadOne: React.FC = () => {
     return (
         <>
         <div style={{ display:'flex', gap:'50px' }}>
-            <Link to="../propertyinfo"> {/* Link to the desired component */}
+            <Link to="../../property1info"> {/* Link to the desired component */}
                 <Card  sx={{ maxWidth: 500, maxHeight: 500 }}>
                     <CardMedia
                         sx={{ height: 250 }}

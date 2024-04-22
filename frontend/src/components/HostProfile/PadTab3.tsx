@@ -23,7 +23,7 @@ const PadThree: React.FC = () => {
     return (
         <>
         <div style={{ display:'flex',gap:'50px' }}>
-            <Link to="../property3"> 
+        <Link to="../../property3info">
                 <Card  sx={{ maxWidth: 500, maxHeight: 500 }}>
                     <CardMedia
                         sx={{ height: 250 }}

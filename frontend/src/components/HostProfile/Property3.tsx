@@ -3,10 +3,10 @@ import { styled } from '@mui/material/styles';
 import { TextField, Button, Typography  } from '@mui/material';
 // import { Card, Container, dividerClasses} from '@mui/material'; 
 // import { useHistory } from 'react-router-dom';
-import Header from './Header.tsx';
-import Lot9 from '../images/Lot9.jpg';
-import Lot10 from '../images/Lot10.jpg';
-import CityScape from '../images/CityScape.jpg'
+import UserSettings from '../Dashboard/UserSettings.tsx';
+import Lot9 from '../../images/Lot9.jpg';
+import Lot10 from '../../images/Lot10.jpg';
+import CityScape from '../../images/CityScape.jpg'
 import Grid from '@mui/material/Grid';
 import PropertyForm from './PropertyForm.tsx';
 import Calendar from './Calendar.tsx';
@@ -15,6 +15,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
+import Nav from './SideNav.tsx'
 
 
 const RootContainer = styled('div')({
@@ -124,12 +125,13 @@ const Property3: React.FC = () => {
 
 
     const navigateToHprofile = () => {
-        window.location.href = '/hprofile'; // Change the window location to navigate to hprofile page
+        window.location.href = '/hostprofile'; // Change the window location to navigate to hprofile page
     };
 
     return (   
         <>
-            <Header></Header>
+            <UserSettings></UserSettings>
+            <Nav></Nav>
             <Box sx={{ flexGrow: 1, m:4, paddingLeft:'10em'}} >
             <Grid container spacing={2}>
                 <Grid xs={4} >

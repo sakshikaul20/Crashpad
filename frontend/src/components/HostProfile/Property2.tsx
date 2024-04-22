@@ -3,10 +3,10 @@ import { styled } from '@mui/material/styles';
 import { TextField, Button, Typography  } from '@mui/material';
 // import { Card, Container, dividerClasses} from '@mui/material'; 
 // import { useHistory } from 'react-router-dom';
-import Header from './Header.tsx';
-import HiddenEscape from '../images/HiddenEscape.jpg';
-import Lot6 from '../images/Lot6.jpg';
-import Lot7 from '../images/Lot7.jpg';
+import UserSettings from '../Dashboard/UserSettings.tsx';
+import HiddenEscape from '../../images/HiddenEscape.jpg';
+import Lot6 from '../../images/Lot6.jpg';
+import Lot7 from '../../images/Lot7.jpg';
 import Grid from '@mui/material/Grid';
 import PropertyForm from './PropertyForm.tsx'
 import Calendar from './Calendar.tsx';
@@ -114,12 +114,12 @@ const Property2: React.FC = () => {
 
 
     const navigateToHprofile = () => {
-        window.location.href = '/hprofile'; // Change the window location to navigate to hprofile page
+        window.location.href = '//hostprofile'; // Change the window location to navigate to hprofile page
     };
 
     return (   
         <>
-            <Header></Header>
+            <UserSettings></UserSettings>
             <Box sx={{ flexGrow: 1, m:4, paddingLeft:'10em'}} >
               <Grid container spacing={2}>
                   <Grid xs={3} >

@@ -25,6 +25,9 @@ import UserSettings from "./components/Dashboard/UserSettings.tsx";
 import Dashboard from "./components/Dashboard/Dashboard.tsx";
 import Hprofile from "./components/HostProfile/hprofile.tsx";
 import Property1 from "./components/HostProfile/Property1.tsx";
+import Property2 from "./components/HostProfile/Property2.tsx";
+import Property3 from "./components/HostProfile/Property3.tsx";
+
 
 const properties = [
   // This would be your data coming from an API or static file
@@ -62,7 +65,9 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}></Route>
 
           <Route path="/hostprofile" element={<Hprofile />}></Route>
-          <Route path="/propertyinfo" element={<Property1 />}></Route>
+          <Route path="/property1info" element={<Property1 />}></Route>
+          <Route path="/property2info" element={<Property2 />}></Route>
+          <Route path="/property3info" element={<Property3/>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
