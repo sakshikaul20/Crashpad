@@ -3,12 +3,12 @@ import { styled } from '@mui/material/styles';
 import { TextField, Button, Typography  } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import UserSettings from './Dashboard/UserSettings.tsx';
-import CountryPad from '../images/CountryEscape.jpg';
-import Pad1 from '../images/Pad1.jpg'
-import Lot1 from '../images/Lot1.jpg'
-import Lot2 from '../images/Lot2.jpg'
-import Lot3 from '../images/Lot3.jpg'
+import UserSettings from '../Dashboard/UserSettings.tsx';
+import CountryPad from '../../images/CountryEscape.jpg';
+// import Pad1 from '../images/Pad1.jpg'
+import Lot1 from '../../images/Lot1.jpg'
+import Lot2 from '../../images/Lot2.jpg'
+import Lot3 from '../../images/Lot3.jpg'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
