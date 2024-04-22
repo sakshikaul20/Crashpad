@@ -58,11 +58,8 @@ function App() {
           <Route path="/signup" element={<Signup />}></Route>
 
           <Route path="/dashboard" element={<Dashboard />}></Route>
-
-          <Route path="/dashboard" element={<Dashboard />}></Route>
-
-          <Route path="/hostprofile" element={<Hprofile />}></Route>
           <Route path="/propertyinfo" element={<Property1 />}></Route>
+          <Route path="/hostprofile" element={<Hprofile />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
