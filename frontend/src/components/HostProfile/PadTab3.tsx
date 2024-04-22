@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import CityScape from '../images/CityScape.jpg'
+import CityScape from '../../images/CityScape.jpg'
 import Calendar from "./Calendar.tsx";
 import { Link } from 'react-router-dom';
 

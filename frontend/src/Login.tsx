@@ -39,10 +39,7 @@ const App: React.FC = () => {
   const navigate = useNavigate(); // hook to access the navigation function
 
   const handleLogin = () => {
-    // Here you would handle the login logic
-
-    // After login logic, redirect to the dashboard
-    navigate('/dashboard'); // Replace '/dashboard' with the path to your dashboard
+    navigate('/dashboard'); 
   };
 
   return (

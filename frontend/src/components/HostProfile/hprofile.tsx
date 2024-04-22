@@ -1,12 +1,12 @@
 import React from "react";
-import Nav from './components/NavBar/SideNav.tsx';
-import Header from "./components/Header.tsx";
+import Nav from '../NavBar/SideNav.tsx';
+import Header from "../Dashboard/UserSettings.tsx";
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import HUserProfile from "./components/HUserProfile.tsx";
-import BasicTabs from "./components/Tabs.tsx";
-import Hprofile from './components/Hprofile.tsx'
+import HUserProfile from "./HUserProfile.tsx";
+import BasicTabs from "./Tabs.tsx";
+
 
 
 
@@ -33,4 +33,3 @@ const hprofile: React.FC = () => {
 }
 
 export default hprofile;
-

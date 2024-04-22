@@ -4,36 +4,35 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Link } from 'react-router-dom';
-// import Pad1 from '../images/Pad1.jpg'
-import CountryEscape from '../images/CountryEscape.jpg';
+import HiddenEscape from '../../images/HiddenEscape.jpg'
 import Calendar from "./Calendar.tsx";
+import { Link } from 'react-router-dom';
 
 
-const PadOne: React.FC = () => {
+const PadTwo: React.FC = () => {
 
     const events = [
         {
-            title: 'Doe Reservation',
-            start: new Date(2024, 3, 21),
-            end: new Date(2024, 3, 27),
+            title: 'Jane Reservation',
+            start: new Date(2024, 3, 14),
+            end: new Date(2024, 3, 20),
         }
         // Add more events as needed
     ];
 
     return (
         <>
-        <div style={{ display:'flex', gap:'50px' }}>
-            <Link to="../property1"> {/* Link to the desired component */}
+        <div style={{ display:'flex',gap:'50px' }}>
+            <Link to="../property2"> 
                 <Card  sx={{ maxWidth: 500, maxHeight: 500 }}>
                     <CardMedia
                         sx={{ height: 250 }}
-                        image={CountryEscape}
+                        image={HiddenEscape}
                         title="green iguana"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h6" component="div">
-                        Country Escape
+                        Hidden Escape
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
                         City, State, Zip code | Distance
@@ -57,4 +56,4 @@ const PadOne: React.FC = () => {
     );
 }
 
-export default PadOne
+export default PadTwo

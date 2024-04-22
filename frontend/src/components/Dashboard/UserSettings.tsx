@@ -6,6 +6,7 @@ import {
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link, useNavigate } from 'react-router-dom';
 
 const UserSettings = () => {
   // State for menu anchor
@@ -25,6 +26,10 @@ const UserSettings = () => {
     setAnchorEl(null);
   };
 
+  const navigate = useNavigate();
+  const handleOpenHostProfile = () => {
+    navigate('/hostprofile'); 
+  };
   // Handle search input changes
   const handleSearch = (event) => {
     setSearch(event.target.value);
@@ -61,7 +66,7 @@ const UserSettings = () => {
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
-            <MenuItem onClick={handleClose}>Host Profile</MenuItem>
+            <MenuItem onClick={handleOpenHostProfile}>Host Profile</MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
             <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Menu>

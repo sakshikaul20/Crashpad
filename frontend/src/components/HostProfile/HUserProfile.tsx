@@ -7,7 +7,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import ProfileImg from '../images/ProfileImg.png';
+import ProfileImg from '../../images/ProfileImg.png';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -114,10 +115,13 @@ const HUserProfile: React.FC = () => {
       // const handleShowProfile = () => {
       //   setShowUserProfile(true);
       // }
-      const handleShowProfile = () => {
-        setShowProfileModal(true); // Set state to show modal
-      }
 
+
+      const navigate = useNavigate();
+      const handleShowProfile = () => {
+ 
+        navigate('/propertyinfo'); 
+      };
     return (
         <>
           <Grid container spacing={2}>

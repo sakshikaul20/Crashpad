@@ -4,18 +4,18 @@ import { TextField, Button, Typography  } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Header from './Header.tsx';
-import CountryPad from '../images/CountryEscape.jpg';
-import Pad1 from '../images/Pad1.jpg'
-import Lot1 from '../images/Lot1.jpg'
-import Lot2 from '../images/Lot2.jpg'
-import Lot3 from '../images/Lot3.jpg'
+import CountryPad from '../../images/CountryEscape.jpg';
+// import Pad1 from '../images/Pad1.jpg'
+import Lot1 from '../../images/Lot1.jpg'
+import Lot2 from '../../images/Lot2.jpg'
+import Lot3 from '../../images/Lot3.jpg'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 import Calendar from './Calendar.tsx';
 import PropertyForm from './PropertyForm.tsx';
-import Nav from './NavBar/SideNav.tsx'
+import Nav from './SideNav.tsx'
 
 
 const SideBySide = styled('div')({
@@ -116,7 +116,7 @@ const Property1: React.FC = () => {
 
 
     const navigateToHprofile = () => {
-        window.location.href = '/hprofile'; // Change the window location to navigate to hprofile page
+        window.location.href = '/hostprofile'; // Change the window location to navigate to hprofile page
     };
 
     return (   
@@ -235,7 +235,7 @@ const Property1: React.FC = () => {
             </Box>
             <button style={{paddingLeft:'8em'}}onClick={navigateToHprofile}>Back to Profile</button>
             <div style={{ display:'flex', gap:'50px', paddingLeft:'8em', paddingRight: '5em' }}>
-                <Link to="../Crash"> {/* Link to the desired component */}
+                <Link to="./hostprofile"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
                             sx={{ height: 250 }}
