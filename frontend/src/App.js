@@ -1,108 +1,48 @@
+import React from "react";
 
-import
-React
-from
-'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import {
-BrowserRouter,
-Routes,
-Route }
-from
-'react-router-dom';
+import Login from "./Login.tsx";
 
-import
-Login
-from
-'./Login.tsx';
+import Signup from "./Signup.tsx";
 
-import
-Signup
-from
-'./Signup.tsx';
+import SideNav from "./components/NavBar/SideNav.tsx";
 
-import
-SideNav
-from
-'./components/NavBar/SideNav.tsx'
+import SearchBar from "./components/Search/SearchBar.tsx";
 
-import
-SearchBar
-from
-'./components/Search/SearchBar.tsx';
+import ToggleButtons from "./components/ToggleFilterButtons/ToggleButtons.tsx";
 
-import
-ToggleButtons
-from
-'./components/ToggleFilterButtons/ToggleButtons.tsx';
+import { Grid } from "@mui/material";
 
-import {
-Grid }
-from
-'@mui/material';
+import PropertyCards from "./components/Dashboard/Dashboard.tsx";
 
-import
-PropertyCards
-from
-'./components/Dashboard/Dashboard.tsx';
+import PropertyGrid from "./components/Dashboard/Dashboard.tsx";
 
-import
-PropertyGrid
-from
-'./components/Dashboard/Dashboard.tsx';
+import SearchAndToggleBar from "./components/Dashboard/SearchAndToggleBar.tsx";
 
-import
-SearchAndToggleBar
-from
-'./components/Dashboard/SearchAndToggleBar.tsx';
+import UserSettings from "./components/Dashboard/UserSettings.tsx";
 
-import
-UserSettings
-from
-'./components/Dashboard/UserSettings.tsx';
+import Dashboard from "./components/Dashboard/Dashboard.tsx";
+import Hprofile from "./components/HostProfile/hprofile.tsx";
+import Property1 from "./components/HostProfile/Property1.tsx";
 
-import
-Dashboard
-from
-'./components/Dashboard/Dashboard.tsx';
-
-
-
-
-
-
-const
-properties
-= [
-
+const properties = [
   // This would be your data coming from an API or static file
 
-  { title:
-'Maldives',
-imageUrl:
-'/images/loginBG5.jpg',
-description:
-'Beautiful scenery!' },
+  {
+    title: "Maldives",
+    imageUrl: "/images/loginBG5.jpg",
+    description: "Beautiful scenery!",
+  },
 
   // More properties...
-
 ];
 
-
-
-
-function
-App() {
-
+function App() {
   return (
-
     <BrowserRouter>
-
-     <div>
-
-    
-
-    {/* <UserSettings/>
+      <div>
+        {/* <UserSettings/>
 
     <SideNav/>
 
@@ -112,44 +52,18 @@ App() {
 
      <PropertyGrid/> */}
 
-     
+        <Routes>
+          <Route path="/" element={<Login />}></Route>
 
-     <Routes>
+          <Route path="/signup" element={<Signup />}></Route>
 
-        <Route
-path=
-'/'
-element=
-{<Login/>}></Route>
-
-        <Route
-path=
-'/signup'
-element=
-{<Signup/>}></Route>
-
-        <Route
-path=
-'/dashboard'
-element=
-{<Dashboard/>}></Route>
-
-     </Routes>
-
-     
-
-    </div>
-
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/propertyinfo" element={<Property1 />}></Route>
+          <Route path="/hostprofile" element={<Hprofile />}></Route>
+        </Routes>
+      </div>
     </BrowserRouter>
-
-  )
-
+  );
 }
 
-
-
-
-export
-default
-App
-
+export default App;
