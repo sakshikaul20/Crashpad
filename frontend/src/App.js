@@ -26,6 +26,7 @@ import Dashboard from "./components/Dashboard/Dashboard.tsx";
 import PropertReservation from "./components/Dashboard/PropertyReservation.tsx";
 import Hprofile from "./components/HostProfile/hprofile.tsx";
 import Property1 from "./components/HostProfile/Property1.tsx";
+import Css from "./App.css"
 
 const properties = [
   // This would be your data coming from an API or static file

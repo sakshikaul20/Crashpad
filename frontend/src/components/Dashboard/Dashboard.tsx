@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Card, CardMedia, CardContent, Typography, IconButton, CardActions, Box, Collapse, Modal } from '@mui/material';
+import { Grid, Card, CardMedia, CardContent, Typography, IconButton, CardActions, Box, Collapse, Modal, Button } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import cardImage from '../../images/loginBG5.jpg';
@@ -9,18 +9,19 @@ import SearchAndToggleBar from './SearchAndToggleBar.tsx';
 import UserSettings from './UserSettings.tsx';
 import MoreInfoModal from './MoreInfoModal.tsx';
 import { useNavigate } from 'react-router-dom';
+import properties from './properties.js';
 
 
 
-const properties = Array(12).fill({
-  title: "YS, Teton",
-  distance: "2,776 kilometers away",
-  dateRange: "23-28 June",
-  price: "$100",
-  imageUrl: cardImage,
-  isNew: true,
-  rating: "4.9",
-});
+// const properties = Array(12).fill({
+//   title: "YS, Teton",
+//   distance: "2,776 kilometers away",
+//   dateRange: "23-28 June",
+//   price: "$100",
+//   imageUrl: cardImage,
+//   isNew: true,
+//   rating: "4.9",
+// });
 const DetailedModal = ({ property, open, onClose }) => {
 
   return (
@@ -119,20 +120,17 @@ const PropertyGrid = () => {
     <>
       <Grid container spacing={2} sx={{ paddingTop: '16px', paddingLeft: '100px' }}>
         {properties.map((property, index) => (
-          <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
+          <Grid item xs={12} sm={6} md={4} lg={2.4} key={index}>
             {/* Add an onClick handler to each PropertyCard */}
             <PropertyCard property={property} onClick={() => handleNavigate} />
           </Grid>
         ))}
       </Grid>
-      {/* Render the modal outside of the Grid */}
-      {selectedProperty && (
-        <DetailedModal
-          property={selectedProperty}
-          open={modalOpen}
-          onClose={handleCloseModal}
-        />
-      )}
+      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+        <Button variant="contained" sx={{ backgroundColor: 'orange', '&:hover': { backgroundColor: 'darkorange' } }} onClick={() => console.log('Load more properties...')}>
+          Show More
+        </Button>
+      </Box>
     </>
   );
 };

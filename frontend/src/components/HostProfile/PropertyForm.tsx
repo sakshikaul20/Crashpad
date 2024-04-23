@@ -38,7 +38,7 @@ const ShowProperty: React.FC<childProps> = ({
         <h6
           style={{ marginTop: "10px", fontSize: "larger", fontWeight: "700" }}
         >
-          Your Property Details
+         Property Details
         </h6>
         <p>
           <span style={{ fontSize: "16px", fontWeight: "bold" }}>
