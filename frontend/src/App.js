@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./Login.tsx";
 
-import Signup from "./Signup.tsx";
+import Signup from "./SignUp.tsx";
 
 import SideNav from "./components/NavBar/SideNav.tsx";
 
