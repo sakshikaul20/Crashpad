@@ -11,6 +11,8 @@ import WifiIcon from '@mui/icons-material/Wifi';
 import PetsIcon from '@mui/icons-material/Pets';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import { Link } from 'react-router-dom';
+
 
 // Custom style for the ToggleButtonGroup
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
@@ -85,7 +87,9 @@ const SearchAndToggleBar = () => {
       </StyledToggleButtonGroup>
       <Box sx={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '8px' }}>
         <Button variant="text">List</Button>
+        <Link to="../map">
         <Button variant="text">Map</Button>
+        </Link>
       </Box>
     </Box>
   );

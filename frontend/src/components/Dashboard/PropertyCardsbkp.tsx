@@ -3,7 +3,7 @@ import { Grid, Card, CardMedia, CardContent, Typography, IconButton, CardActions
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import cardImage from '../../images/loginBG5.jpg';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+
 
 
 // Mock data for a single property, replicated 12 times to simulate a list of properties

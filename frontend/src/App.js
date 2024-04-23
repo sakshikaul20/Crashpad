@@ -27,7 +27,11 @@ import Hprofile from "./components/HostProfile/hprofile.tsx";
 import Property1 from "./components/HostProfile/Property1.tsx";
 import Property2 from "./components/HostProfile/Property2.tsx";
 import Property3 from "./components/HostProfile/Property3.tsx";
+<<<<<<< HEAD
 
+=======
+import PadMap from "./Map.tsx";
+>>>>>>> Crashpad_Host
 
 const properties = [
   // This would be your data coming from an API or static file
@@ -67,7 +71,12 @@ function App() {
           <Route path="/hostprofile" element={<Hprofile />}></Route>
           <Route path="/property1info" element={<Property1 />}></Route>
           <Route path="/property2info" element={<Property2 />}></Route>
+<<<<<<< HEAD
           <Route path="/property3info" element={<Property3/>}></Route>
+=======
+          <Route path="/property3info" element={<Property3 />}></Route>
+          <Route path="/map" element={<PadMap />}></Route>
+>>>>>>> Crashpad_Host
         </Routes>
       </div>
     </BrowserRouter>

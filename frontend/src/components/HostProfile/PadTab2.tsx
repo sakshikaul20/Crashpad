@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography } from '@mui/material';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import HiddenEscape from '../../images/HiddenEscape.jpg'
@@ -23,7 +22,11 @@ const PadTwo: React.FC = () => {
     return (
         <>
         <div style={{ display:'flex',gap:'50px' }}>
+<<<<<<< HEAD
             <Link to="../../property2info"> 
+=======
+            <Link to="/property2info" > 
+>>>>>>> Crashpad_Host
                 <Card  sx={{ maxWidth: 500, maxHeight: 500 }}>
                     <CardMedia
                         sx={{ height: 250 }}

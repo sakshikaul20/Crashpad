@@ -15,7 +15,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
-
+import Nav from './SideNav.tsx'
 
 const SideBySide = styled('div')({
     display: 'flex',
@@ -114,12 +114,20 @@ const Property2: React.FC = () => {
 
 
     const navigateToHprofile = () => {
+<<<<<<< HEAD
         window.location.href = '//hostprofile'; // Change the window location to navigate to hprofile page
+=======
+        window.location.href = '/hostprofile'; // Change the window location to navigate to hprofile page
+>>>>>>> Crashpad_Host
     };
 
     return (   
         <>
             <UserSettings></UserSettings>
+<<<<<<< HEAD
+=======
+            <Nav></Nav>
+>>>>>>> Crashpad_Host
             <Box sx={{ flexGrow: 1, m:4, paddingLeft:'10em'}} >
               <Grid container spacing={2}>
                   <Grid xs={3} >
@@ -226,9 +234,9 @@ const Property2: React.FC = () => {
                       />
               </Grid>
               </Box>
-              <button onClick={navigateToHprofile}>Back to Profile</button>
+              <button style={{paddingLeft:'8em'}}onClick={navigateToHprofile}>Back to Profile</button>
               <div style={{ display:'flex', gap:'50px', paddingLeft:'8em', paddingRight: '5em' }}>
-                <Link to="../Crash"> {/* Link to the desired component */}
+              <Link to="../hostprofile"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
                             sx={{ height: 250 }}

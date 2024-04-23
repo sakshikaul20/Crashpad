@@ -24,7 +24,11 @@ const PadOne: React.FC = () => {
     return (
         <>
         <div style={{ display:'flex', gap:'50px' }}>
+<<<<<<< HEAD
             <Link to="../../property1info"> {/* Link to the desired component */}
+=======
+            <Link to="../property1info"> {/* Link to the desired component */}
+>>>>>>> Crashpad_Host
                 <Card  sx={{ maxWidth: 500, maxHeight: 500 }}>
                     <CardMedia
                         sx={{ height: 250 }}
@@ -49,9 +53,9 @@ const PadOne: React.FC = () => {
                 startAccessor="start"
                 endAccessor="end"
                 selectable
-                style={{ height: '350px' }}
+                style={{ height: '350px'}}
             />
-            
+           
         </div>
         </>
     );

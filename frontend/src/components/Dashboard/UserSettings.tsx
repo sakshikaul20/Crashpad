@@ -26,10 +26,16 @@ const UserSettings = () => {
     setAnchorEl(null);
   };
 
+  
   const navigate = useNavigate();
   const handleOpenHostProfile = () => {
     navigate('/hostprofile'); 
   };
+
+  const handleOpenLogOut = () => {
+    navigate('/'); 
+  };
+
   // Handle search input changes
   const handleSearch = (event) => {
     setSearch(event.target.value);
@@ -68,7 +74,7 @@ const UserSettings = () => {
           >
             <MenuItem onClick={handleOpenHostProfile}>Host Profile</MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <MenuItem onClick={handleOpenLogOut}>Logout</MenuItem>
           </Menu>
           <IconButton size="large" sx={{ marginRight: '20px' }}>
             <NotificationsIcon />

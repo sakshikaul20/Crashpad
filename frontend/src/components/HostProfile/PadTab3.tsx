@@ -23,7 +23,11 @@ const PadThree: React.FC = () => {
     return (
         <>
         <div style={{ display:'flex',gap:'50px' }}>
+<<<<<<< HEAD
         <Link to="../../property3info">
+=======
+            <Link to="/property3info"> 
+>>>>>>> Crashpad_Host
                 <Card  sx={{ maxWidth: 500, maxHeight: 500 }}>
                     <CardMedia
                         sx={{ height: 250 }}

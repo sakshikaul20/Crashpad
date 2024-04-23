@@ -108,19 +108,12 @@ const HUserProfile: React.FC = () => {
         setProfileFormData({...profileFormData, [name]:value});
       }
 
-      // const handleChanges = (event: SelectChangeEvent) => {
-      //   setAge(event.target.value as string);
-      // };
-
-      // const handleShowProfile = () => {
-      //   setShowUserProfile(true);
-      // }
 
 
       const navigate = useNavigate();
       const handleShowProfile = () => {
  
-        navigate('/propertyinfo'); 
+        navigate('/property1info'); 
       };
     return (
         <>
@@ -217,22 +210,6 @@ const HUserProfile: React.FC = () => {
                     </Select>
                   </FormControl>
 
-
-                  {/* <TextField
-                      fullWidth
-                      margin="normal"
-                      select
-                      id="gender"
-                      label="Gender"
-                      variant="outlined"
-                      onChange={handleChange} 
-                      helperText={errors ? errors.gender : ""}
-                  >
-                      <option value="">Select Gender</option>
-                      <option value="male">Male</option>
-                      <option value="female">Female</option>
-                      <option value="other">Other</option>
-                  </TextField> */}
                   </SideBySide>
                   <TextField
                       fullWidth

@@ -16,7 +16,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 import Nav from './SideNav.tsx'
+<<<<<<< HEAD
 
+=======
+>>>>>>> Crashpad_Host
 
 const RootContainer = styled('div')({
     height: '100vh',
@@ -238,9 +241,9 @@ const Property3: React.FC = () => {
                     />
             </Grid>
             </Box>
-            <button onClick={navigateToHprofile}>Back to Profile</button>
+            <button style={{paddingLeft:'8em'}}onClick={navigateToHprofile}>Back to Profile</button>
             <div style={{ display:'flex', gap:'50px', paddingLeft:'8em', paddingRight: '5em' }}>
-                <Link to="../Crash"> {/* Link to the desired component */}
+                <Link to="./hostprofile"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
                             sx={{ height: 250 }}
