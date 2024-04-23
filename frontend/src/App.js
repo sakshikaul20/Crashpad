@@ -27,6 +27,9 @@ import PropertReservation from "./components/Dashboard/PropertyReservation.tsx";
 import Hprofile from "./components/HostProfile/hprofile.tsx";
 import Property1 from "./components/HostProfile/Property1.tsx";
 import Css from "./App.css"
+import Payment from "./components/Payment/Payment.tsx";
+import EditProfile from "./components/Traveller/EditUserProfile.tsx";
+import TravelerProfile from "./components/Traveller/TravelerProfile.tsx";
 
 const properties = [
   // This would be your data coming from an API or static file
@@ -61,6 +64,9 @@ function App() {
           <Route path="/propertyinfo" element={<Property1 />}></Route>
           <Route path="/hostprofile" element={<Hprofile />}></Route>
           <Route path="/propertyreservation" element={<PropertReservation />}></Route>
+           <Route path="/payment" element={<Payment />}></Route>
+          <Route path="/editprofile" element={<EditProfile />}></Route>
+          <Route path="/travelerprofile" element={<TravelerProfile />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
