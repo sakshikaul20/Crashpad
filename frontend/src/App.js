@@ -23,6 +23,7 @@ import SearchAndToggleBar from "./components/Dashboard/SearchAndToggleBar.tsx";
 import UserSettings from "./components/Dashboard/UserSettings.tsx";
 
 import Dashboard from "./components/Dashboard/Dashboard.tsx";
+import PropertReservation from "./components/Dashboard/PropertyReservation.tsx";
 import Hprofile from "./components/HostProfile/hprofile.tsx";
 import Property1 from "./components/HostProfile/Property1.tsx";
 
@@ -54,12 +55,11 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Login />}></Route>
-
           <Route path="/signup" element={<Signup />}></Route>
-
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/propertyinfo" element={<Property1 />}></Route>
           <Route path="/hostprofile" element={<Hprofile />}></Route>
+          <Route path="/propertyreservation" element={<PropertReservation />}></Route>
         </Routes>
       </div>
     </BrowserRouter>

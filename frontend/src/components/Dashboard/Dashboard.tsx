@@ -8,6 +8,7 @@ import SideNav from '../NavBar/SideNav.tsx';
 import SearchAndToggleBar from './SearchAndToggleBar.tsx';
 import UserSettings from './UserSettings.tsx';
 import MoreInfoModal from './MoreInfoModal.tsx';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -21,8 +22,7 @@ const properties = Array(12).fill({
   rating: "4.9",
 });
 const DetailedModal = ({ property, open, onClose }) => {
-  // Here you would layout your modal with the content you want to display
-  // For now, I'll just display the title of the property as an example
+
   return (
     <Modal open={open} onClose={onClose}>
       <Box sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: 400, bgcolor: 'background.paper', boxShadow: 24, p: 4 }}>
@@ -36,50 +36,60 @@ const DetailedModal = ({ property, open, onClose }) => {
   );
 };
 
-const PropertyCard = ({ property, onClick  }) => (
-  <Card sx={{ maxWidth: 345, position: 'relative' }} onClick={() => onClick(property)}>
-    <CardMedia
-      component="img"
-      height="194"
-      image={property.imageUrl}
-      alt={property.title}
-    />
-    <IconButton 
-      aria-label="add to favorites" 
-      sx={{ position: 'absolute', top: 8, right: 8, color: 'grey' }}
-    >
-      <FavoriteBorderIcon />
-    </IconButton>
-    <CardContent>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Typography gutterBottom variant="subtitle1" component="div">
-          {property.title}
-        </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          {property.isNew && (
-            <Typography variant="caption" sx={{ backgroundColor: 'orange', color: 'white', borderRadius: 1, p: '2px 4px', marginRight: '8px' }}>
-              New
-            </Typography>
-          )}
-         
-          <Typography component="span" variant="caption" sx={{ marginLeft: '2px' }}>
-            {property.rating}
-            <StarBorderIcon />
+const PropertyCard = ({ property }) => {
+  const navigate = useNavigate(); // Hook for navigation
+
+  // Define the function to handle navigation
+  const handleNavigate = () => {
+    navigate('/propertyreservation', { state: { property } }); // Navigate to the detail page and pass property data via state
+  };
+
+  return (
+    <Card sx={{ maxWidth: 345, position: 'relative' }} onClick={handleNavigate}>
+      <CardMedia
+        component="img"
+        height="194"
+        image={property.imageUrl}
+        alt={property.title}
+      />
+      <IconButton 
+        aria-label="add to favorites" 
+        sx={{ position: 'absolute', top: 8, right: 8, color: 'grey' }}
+      >
+        <FavoriteBorderIcon />
+      </IconButton>
+      <CardContent>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <Typography gutterBottom variant="subtitle1" component="div">
+            {property.title}
           </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            {property.isNew && (
+              <Typography variant="caption" sx={{ backgroundColor: 'orange', color: 'white', borderRadius: 1, p: '2px 4px', marginRight: '8px' }}>
+                New
+              </Typography>
+            )}
+           
+            <Typography component="span" variant="caption" sx={{ marginLeft: '2px' }}>
+              {property.rating}
+              <StarBorderIcon />
+            </Typography>
+          </Box>
         </Box>
-      </Box>
-      <Typography variant="body2" color="text.secondary">
-        {property.distance}
-      </Typography>
-      <Typography variant="body2" color="text.primary" gutterBottom>
-        {property.dateRange}
-      </Typography>
-      <Typography variant="subtitle1" color="text.secondary">
-        {property.price} / night
-      </Typography>
-    </CardContent>
-  </Card>
-);
+        <Typography variant="body2" color="text.secondary">
+          {property.distance}
+        </Typography>
+        <Typography variant="body2" color="text.primary" gutterBottom>
+          {property.dateRange}
+        </Typography>
+        <Typography variant="subtitle1" color="text.secondary">
+          {property.price} / night
+        </Typography>
+      </CardContent>
+    </Card>
+  );
+};
+
 
 // const PropertyGrid = () => (
 //   <Grid container spacing={2} sx={{ paddingTop: '16px', paddingLeft: '100px' }}> {/* Adjust paddingLeft according to the width of the side navigation panel */}
@@ -111,7 +121,7 @@ const PropertyGrid = () => {
         {properties.map((property, index) => (
           <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
             {/* Add an onClick handler to each PropertyCard */}
-            <PropertyCard property={property} onClick={() => handleCardClick(property)} />
+            <PropertyCard property={property} onClick={() => handleNavigate} />
           </Grid>
         ))}
       </Grid>

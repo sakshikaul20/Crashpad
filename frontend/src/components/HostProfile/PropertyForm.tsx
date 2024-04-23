@@ -1,47 +1,84 @@
-import React, {useState} from 'react';
-import { Button } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
+import React, { useState } from "react";
+import { Box, Button, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Grid from "@mui/material/Grid";
 
-
-// const LoginButton = styled(Button)({
-//     marginTop: '1em'
-// });
+const AmenitiesList = () => {
+  return (
+    <Box>
+      <ul>
+        <li>Wi-Fi</li>
+        <li>Fire pit</li>
+        <li>Laundry facilities</li>
+        <li>Pet-friendly</li>
+        {/* Add more list items here */}
+      </ul>
+    </Box>
+  );
+};
 
 interface childProps {
-    profileFormData:any,
-    onClickEdit:() => void
-}
-  
-
-const ShowProperty:React.FC<childProps> = ({profileFormData, onClickEdit   }) => {
-
-    const [showUserProfileEdit, setShowUserProfileEdit] = useState(false)
-
-    const profileSubmitData = () => {
-      onClickEdit()
-    }
-    
-    return (
-        <>
-        <Grid sx={{ mr:2,ml:2 }} >
-            <h6 style={{ marginTop: '10px', fontSize: 'larger', fontWeight: '700' }}>Your Property Details</h6>
-            <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>Location: </span>{profileFormData.location}</p>
-            <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>Address: </span>{profileFormData.address} </p>
-            <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>City: </span> {profileFormData.city} {profileFormData.state} {profileFormData.zip}</p>
-            <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>Age: </span> {profileFormData.age} years</p>
-            <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>About: </span> {profileFormData.aboutMe}</p>
-            {/* <LoginButton
-                fullWidth
-                variant="contained"
-                style={{ backgroundColor: '#FDA117' }}
-                onClick={profileSubmitData}
-            >
-                Edit
-            </LoginButton> */}
-        </Grid>
-        </>
-    );
+  profileFormData: any;
+  onClickEdit: () => void;
 }
 
-export default ShowProperty
+const ShowProperty: React.FC<childProps> = ({
+  profileFormData,
+  onClickEdit,
+}) => {
+  const [showUserProfileEdit, setShowUserProfileEdit] = useState(false);
+
+  const profileSubmitData = () => {
+    onClickEdit();
+  };
+
+  return (
+    <>
+      <Grid sx={{ mr: 2, ml: 2 }}>
+        <h6
+          style={{ marginTop: "10px", fontSize: "larger", fontWeight: "700" }}
+        >
+          Your Property Details
+        </h6>
+        <p>
+          <span style={{ fontSize: "16px", fontWeight: "bold" }}>
+            Location:{" "}
+          </span>
+          {profileFormData.location}
+        </p>
+        <p>
+          <span style={{ fontSize: "16px", fontWeight: "bold" }}>
+            Address:{" "}
+          </span>
+          {profileFormData.address}{" "}
+        </p>
+        <p>
+          <span style={{ fontSize: "16px", fontWeight: "bold" }}>City: </span>{" "}
+          {profileFormData.city} {profileFormData.state} {profileFormData.zip}
+        </p>
+        <p>
+          <span style={{ fontSize: "16px", fontWeight: "bold" }}>
+            Hourly Rate:{" "}
+          </span>{" "}
+          ${profileFormData.hourlyrate}
+        </p>
+        <span style={{ fontSize: "16px", fontWeight: "bold" }}>
+          Amenities:{" "}
+        </span>
+        <AmenitiesList />
+        <Button
+          variant="contained"
+          style={{ backgroundColor: "#FDA117" }}
+          onClick={() => {
+            // Implement the reservation logic or navigation here
+            console.log("Reserve button clicked");
+          }}
+        >
+          Reserve
+        </Button>
+      </Grid>
+    </>
+  );
+};
+
+export default ShowProperty;
