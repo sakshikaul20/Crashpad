@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { TextField, Button, Typography  } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Header from './Header.tsx';
+import UserSettings from '../Dashboard/UserSettings.tsx';
 import CountryPad from '../../images/CountryEscape.jpg';
 // import Pad1 from '../images/Pad1.jpg'
 import Lot1 from '../../images/Lot1.jpg'
@@ -94,10 +94,6 @@ const Property1: React.FC = () => {
 
         setPropertyFormData({...propertyFormData, [name]:value});
       }
-
-      // const handleChanges = (event: SelectChangeEvent) => {
-      //   setAge(event.target.value as string);
-      // };
     
 
       const handleShowProperty = () => {
@@ -121,15 +117,15 @@ const Property1: React.FC = () => {
 
     return (   
         <>
-            <Header></Header>
+            <UserSettings></UserSettings>
             <Nav></Nav>
-            <Box sx={{ flexGrow: 1, m:6, paddingLeft:'5em'}} >
+            <Box sx={{ flexGrow: 1, m:4, paddingLeft:'10em'}} >
               <Grid container spacing={2}>
-                  <Grid xs={6} >
-                    <img src={CountryPad}  style={{ width: "80%", borderRadius: "20px" }} />
+                  <Grid xs={3} >
+                    <img src={CountryPad}  style={{ width: "100%", borderRadius: "20px" }} />
                     
                   </Grid>
-                <Grid item xs={6}>
+                
                       {
                       ShowProperty ? 
                       (<PropertyForm profileFormData={propertyFormData}  onClickEdit={handleShowProperty}></PropertyForm>) : 
@@ -221,7 +217,7 @@ const Property1: React.FC = () => {
                             </Typography>
                           </form>
                     </Grid>)}
-                        <Grid item xs={12}>
+                        
                           <Calendar
                               events={events}
                               startAccessor="start"
@@ -229,8 +225,8 @@ const Property1: React.FC = () => {
                               selectable
                               style={{ height: '400px'}}
                           />
-                        </Grid>
-                </Grid>
+                       
+                
               </Grid>
             </Box>
             <button style={{paddingLeft:'8em'}}onClick={navigateToHprofile}>Back to Profile</button>
