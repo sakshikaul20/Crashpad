@@ -7,6 +7,8 @@ import UserSettings from '../Dashboard/UserSettings.tsx';
 import HiddenEscape from '../../images/HiddenEscape.jpg';
 import Lot6 from '../../images/Lot6.jpg';
 import Lot7 from '../../images/Lot7.jpg';
+import Lot8 from '../../images/Lot8.jpg';
+import Lot5 from '../../images/Lot5.jpg';
 import Grid from '@mui/material/Grid';
 import PropertyForm from './PropertyForm.tsx'
 import Calendar from './Calendar.tsx';
@@ -15,7 +17,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
-import Nav from './SideNav.tsx'
+import Nav from '../NavBar/SideNav.tsx'
 
 const SideBySide = styled('div')({
     display: 'flex',
@@ -229,82 +231,54 @@ const Property2: React.FC = () => {
               </Box>
               <button style={{paddingLeft:'8em'}}onClick={navigateToHprofile}>Back to Profile</button>
               <div style={{ display:'flex', gap:'50px', paddingLeft:'8em', paddingRight: '5em' }}>
-              <Link to="../hostprofile"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
-                            image={Lot6}
+                            sx={{ width: 400, height: 250 }}
+                            image={Lot5}
                             title="green iguana"
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h6" component="div">
                                 Lot 1
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
-                <Link to="../property2"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
-                            image={Lot7}
+                            sx={{ width:400, height: 250 }}
+                            image={Lot6}
                             title="green iguana"
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h6" component="div">
                                 Lot 2
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
-                <Link to="../property2"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
-                            image={Lot6}
+                            sx={{ width:400,height: 250 }}
+                            image={Lot7}
                             title="green iguana"
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h6" component="div">
                                 Lot 3
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
-                <Link to="../property2"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
-                            image={Lot6}
+                            sx={{ width:400, height: 250 }}
+                            image={Lot7}
                             title="green iguana"
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h6" component="div">
                                 Lot 4
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
             </div>
         </>
     );

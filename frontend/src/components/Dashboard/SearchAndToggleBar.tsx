@@ -31,6 +31,11 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
 const SearchAndToggleBar = () => {
   const [search, setSearch] = useState('');
   const [selectedToggle, setSelectedToggle] = useState(null);
+  const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
+
+  const handleViewModeChange = (event: React.MouseEvent<HTMLElement>, newValue: 'list' | 'map') => {
+    setViewMode(newValue);
+  };
 
   const handleToggle = (event, newToggle) => {
     setSelectedToggle(newToggle);
@@ -86,12 +91,19 @@ const SearchAndToggleBar = () => {
         </ToggleButton> */}
       </StyledToggleButtonGroup>
       <Box sx={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '8px' }}>
-        <Button variant="text">List</Button>
-        <Link to="../map">
-        <Button variant="text">Map</Button>
+      <ToggleButtonGroup value={viewMode} exclusive onChange={handleViewModeChange}>
+            
+            <Link to="../dashboard">
+            <ToggleButton value="list">List</ToggleButton>
+          </Link>
+          <Link to="../map">
+            <ToggleButton value="map">Map</ToggleButton>
+         
         </Link>
+        </ToggleButtonGroup>
+        </Box>
       </Box>
-    </Box>
+    
   );
 };
 
