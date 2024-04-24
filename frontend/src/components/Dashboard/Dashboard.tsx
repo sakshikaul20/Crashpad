@@ -126,7 +126,7 @@ const PropertyGrid = () => {
           </Grid>
         ))}
       </Grid>
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 , paddingTop: '0px'}}>
         <Button variant="contained" sx={{ backgroundColor: 'orange', '&:hover': { backgroundColor: 'darkorange' } }} onClick={() => console.log('Load more properties...')}>
           Show More
         </Button>

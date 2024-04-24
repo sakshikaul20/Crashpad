@@ -11,7 +11,6 @@ const AmenitiesList = () => {
         <li>Fire pit</li>
         <li>Laundry facilities</li>
         <li>Pet-friendly</li>
-        {/* Add more list items here */}
       </ul>
     </Box>
   );
@@ -38,7 +37,7 @@ const ShowProperty: React.FC<childProps> = ({
         <h6
           style={{ marginTop: "10px", fontSize: "larger", fontWeight: "700" }}
         >
-          Your Property Details
+          Property Details
         </h6>
         <p>
           <span style={{ fontSize: "16px", fontWeight: "bold" }}>
@@ -66,7 +65,6 @@ const ShowProperty: React.FC<childProps> = ({
           Amenities:{" "}
         </span>
         <AmenitiesList />
-     
       </Grid>
     </>
   );
