@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import Myprofile from '../../images/myprofile.jpeg';
 
 
 const LoginButton = styled(Button)({
@@ -33,7 +34,7 @@ const ShowUserProfile:React.FC = () => {
         <>
         <Grid container spacing={2}>
             <Grid xs={4} >
-                <img src='myprofile.jpeg' style={{ width: "100%", borderRadius: "20px" }} />
+                <img src={Myprofile} style={{ width: "100%", borderRadius: "20px" }} />
                   
             </Grid>
             <Grid sx={{ mr:2,ml:2 }} >

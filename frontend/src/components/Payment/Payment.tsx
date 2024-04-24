@@ -10,6 +10,12 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import CardPaymentImage from '../../images/rvpark4.jpeg';
+import Mastercard from '../../images/mastercard.png';
+import Visacard from '../../images/visacard.jpg';
+import Debitcard from '../../images/debitcard.jpeg';
+
+
+
 
 
 const LoginButton = styled(Button)({
@@ -34,7 +40,7 @@ const Payment: React.FC = () => {
                 <Box sx={{ flexGrow: 1, m: 5, }} >
                     <Grid container spacing={2}>
                         <Grid xs={4} >
-                            <img src='CardPaymentImage' style={{ width: "100%", borderRadius: "20px" }} />
+                            <img src={CardPaymentImage} style={{ width: "100%", borderRadius: "20px" }} />
                             <Typography variant='h5' sx={{ textAlign: 'center', textDecoration: 'underline', pt: 5 }} > CrashPad payment</Typography>
                             <Typography color="gray" sx={{ textAlign: 'center', textDecoration: 'underline' }}>Cardmember Service
                                                                                                                PO Box 790444
@@ -65,9 +71,9 @@ const Payment: React.FC = () => {
                             <Typography color="gray" sx={{  textDecoration: 'underline' }}>Complete your purchase by providing with your payment details</Typography>
                             <Typography variant='h6' sx={{ textDecoration: 'underline', pt: 5 }} >Card Type</Typography>
                             <Stack direction="row" spacing={2} sx={{ pt: 1, pl: 1 }}>
-                                <img src='mastercard.png' style={{ width: "200px", height: "100px", borderRadius: "10px" }} />
-                                <img src='visacard.jpg'   style={{ width: "200px", height: "100px", borderRadius: "10px" }} />
-                                <img src='debitcard.jpeg' style={{ width: "200px", height: "100px", borderRadius: "10px" }} />
+                                <img src={Mastercard} style={{ width: "200px", height: "100px", borderRadius: "10px" }} />
+                                <img src={Visacard}   style={{ width: "200px", height: "100px", borderRadius: "10px" }} />
+                                <img src={Debitcard} style={{ width: "200px", height: "100px", borderRadius: "10px" }} />
                             </Stack>
                             <Typography variant='h6' sx={{ textDecoration: 'underline', pt: 5 }} >Card Holder Name</Typography>
                             <TextField id="filled-basic" placeholder='Name' variant="filled" size="small" fullWidth />

@@ -11,6 +11,7 @@ import { FlashOffOutlined } from "@mui/icons-material";
 // import ResponsiveAppBar from "../Navbar";
 import Nav from '../NavBar/SideNav.tsx';
 import Header from '../Traveller/TravellerHeaderSetting.tsx';
+import Myprofile from '../../images/myprofile.jpeg';
 
 
 
@@ -107,7 +108,7 @@ const UserProfile: React.FC = () => {
         <Nav/>
           <Grid container spacing={2} marginTop= {'1em'} marginLeft= {'7em'} >
               <Grid xs={4} >
-                  <img src='myprofile.jpeg' style={{ width: "100%", borderRadius: "20px" }} />
+                  <img src={Myprofile} style={{ width: "100%", borderRadius: "20px" }} />
                   
               </Grid>
               {
