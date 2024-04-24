@@ -32,6 +32,12 @@ const UserSettings = () => {
     navigate('/hostprofile'); 
   };
 
+
+
+  const   handleOpenTravelerProfile = () => {
+    navigate('/travelerprofile'); 
+  };
+
   const handleOpenLogOut = () => {
     navigate('/'); 
   };
@@ -73,6 +79,7 @@ const UserSettings = () => {
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
             <MenuItem onClick={handleOpenHostProfile}>Host Profile</MenuItem>
+            <MenuItem onClick={handleOpenTravelerProfile}>Traveler Profile</MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
             <MenuItem onClick={handleOpenLogOut}>Logout</MenuItem>
           </Menu>

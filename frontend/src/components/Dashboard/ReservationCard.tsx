@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography, TextField, ToggleButtonGroup, ToggleButton, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 const CustomCard = styled(Card)({
   maxWidth: 400,
@@ -24,6 +25,10 @@ const ReservationCard = () => {
     if (newCancellation !== null) {
       setCancellation(newCancellation);
     }
+  };
+  const navigate = useNavigate();
+  const handlereservecrashpad = () => {
+    navigate('/payment'); 
   };
 
   return (
@@ -84,7 +89,8 @@ const ReservationCard = () => {
           variant="contained"
           sx={{ backgroundColor: '#FDA117', marginTop: '20px' }}
           fullWidth
-          onClick={() => console.log('Reserve')}
+          onClick={handlereservecrashpad}
+          
         >
           Reserve
         </Button>
