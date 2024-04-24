@@ -27,8 +27,8 @@ const UserSettings = () => {
   };
 
   const navigate = useNavigate();
-  const handleOpenTravellerProfile = () => {
-    navigate('/travelprofile'); 
+  const handlereservecrashpad = () => {
+    navigate('/reserve'); 
   };
 
 
@@ -68,7 +68,7 @@ const UserSettings = () => {
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
-            <MenuItem onClick={handleOpenTravellerProfile}>My Profile</MenuItem>
+            <MenuItem onClick={handlereservecrashpad}>Booking</MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
             <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Menu>

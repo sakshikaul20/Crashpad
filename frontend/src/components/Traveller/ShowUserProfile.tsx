@@ -17,6 +17,7 @@ interface UserFormState {
     aboutMe: string;
 }
 
+
 const ShowUserProfile:React.FC = () => {
     
     const [profileFormData, setProfileFormData] = useState<UserFormState>({
@@ -53,7 +54,7 @@ const ShowUserProfile:React.FC = () => {
                     variant="contained"
                     style={{ backgroundColor: '#FDA117' }}
                 >
-                    Edit
+                  Edit
                 </LoginButton>
             </Grid>
         </Grid>

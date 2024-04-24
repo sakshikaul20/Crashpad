@@ -30,6 +30,10 @@ const UserSettings = () => {
   const handleOpenHostProfile = () => {
     navigate('/hostprofile'); 
   };
+
+  const handleOpenTravelerProfile = () => {
+    navigate('/travelerprofile'); 
+  };
   // Handle search input changes
   const handleSearch = (event) => {
     setSearch(event.target.value);
@@ -67,6 +71,7 @@ const UserSettings = () => {
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
             <MenuItem onClick={handleOpenHostProfile}>Host Profile</MenuItem>
+            <MenuItem onClick={handleOpenTravelerProfile}>Traveler Profile</MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
             <MenuItem onClick={handleClose}>Logout</MenuItem>
           </Menu>

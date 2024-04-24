@@ -105,7 +105,7 @@ const UserProfile: React.FC = () => {
         <>
         <Header />;
         <Nav/>
-          <Grid container spacing={2} marginRight= {'8em'}>
+          <Grid container spacing={2} marginTop= {'1em'} marginLeft= {'7em'} >
               <Grid xs={4} >
                   <img src='myprofile.jpeg' style={{ width: "100%", borderRadius: "20px" }} />
                   
