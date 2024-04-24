@@ -66,16 +66,6 @@ const ShowProperty: React.FC<childProps> = ({
           Amenities:{" "}
         </span>
         <AmenitiesList />
-        <Button
-          variant="contained"
-          style={{ backgroundColor: "#FDA117" }}
-          onClick={() => {
-            // Implement the reservation logic or navigation here
-            console.log("Reserve button clicked");
-          }}
-        >
-          Reserve
-        </Button>
       </Grid>
     </>
   );
