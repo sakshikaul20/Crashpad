@@ -9,13 +9,14 @@ import CountryPad from '../../images/CountryEscape.jpg';
 import Lot1 from '../../images/Lot1.jpg'
 import Lot2 from '../../images/Lot2.jpg'
 import Lot3 from '../../images/Lot3.jpg'
+import Lot4 from '../../images/Lot4.jpg'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link } from 'react-router-dom';
 import Calendar from './Calendar.tsx';
 import PropertyForm from './PropertyForm.tsx';
-import Nav from './SideNav.tsx'
+import Nav from '../NavBar/SideNav.tsx'
 
 
 const SideBySide = styled('div')({
@@ -94,10 +95,6 @@ const Property1: React.FC = () => {
 
         setPropertyFormData({...propertyFormData, [name]:value});
       }
-
-      // const handleChanges = (event: SelectChangeEvent) => {
-      //   setAge(event.target.value as string);
-      // };
     
 
       const handleShowProperty = () => {
@@ -123,13 +120,13 @@ const Property1: React.FC = () => {
         <>
             <UserSettings></UserSettings>
             <Nav></Nav>
-            <Box sx={{ flexGrow: 1, m:6, paddingLeft:'5em'}} >
+            <Box sx={{ flexGrow: 1, m:4, paddingLeft:'10em'}} >
               <Grid container spacing={2}>
-                  <Grid xs={6} >
-                    <img src={CountryPad}  style={{ width: "80%", borderRadius: "20px" }} />
+                  <Grid xs={3} >
+                    <img src={CountryPad}  style={{ width: "100%", borderRadius: "20px" }} />
                     
                   </Grid>
-                <Grid item xs={6}>
+                
                       {
                       ShowProperty ? 
                       (<PropertyForm profileFormData={propertyFormData}  onClickEdit={handleShowProperty}></PropertyForm>) : 
@@ -221,7 +218,7 @@ const Property1: React.FC = () => {
                             </Typography>
                           </form>
                     </Grid>)}
-                        <Grid item xs={12}>
+                        
                           <Calendar
                               events={events}
                               startAccessor="start"
@@ -229,16 +226,15 @@ const Property1: React.FC = () => {
                               selectable
                               style={{ height: '400px'}}
                           />
-                        </Grid>
-                </Grid>
+                       
+                
               </Grid>
             </Box>
             <button style={{paddingLeft:'8em'}}onClick={navigateToHprofile}>Back to Profile</button>
             <div style={{ display:'flex', gap:'50px', paddingLeft:'8em', paddingRight: '5em' }}>
-                <Link to="./hostprofile"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
+                            sx={{ width:400,height: 250 }}
                             image={Lot1}
                             title="green iguana"
                         />
@@ -246,18 +242,11 @@ const Property1: React.FC = () => {
                             <Typography gutterBottom variant="h6" component="div">
                                 Lot 1
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
-                <Link to="../property2"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
+                            sx={{width:400, height: 250 }}
                             image={Lot2}
                             title="green iguana"
                         />
@@ -265,18 +254,11 @@ const Property1: React.FC = () => {
                             <Typography gutterBottom variant="h6" component="div">
                                 Lot 2
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
-                <Link to="../property2"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
+                            sx={{ width:400,height: 250 }}
                             image={Lot3}
                             title="green iguana"
                         />
@@ -284,19 +266,12 @@ const Property1: React.FC = () => {
                             <Typography gutterBottom variant="h6" component="div">
                                 Lot 3
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
-                <Link to="../property2"> {/* Link to the desired component */}
                     <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
                         <CardMedia
-                            sx={{ height: 250 }}
-                            image={Lot1}
+                            sx={{ width:400,height: 250 }}
+                            image={Lot4}
                             title="green iguana"
                         />
                         <CardContent>
@@ -304,14 +279,9 @@ const Property1: React.FC = () => {
                             
                             Lot 4
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                City, State, Zip code | Distance
-                                Stays | Rating
-                                Request | Stays
-                            </Typography>
                         </CardContent>
                     </Card>
-                </Link>
+
                 {/* Add more cards similarly */}
             </div>
         </>

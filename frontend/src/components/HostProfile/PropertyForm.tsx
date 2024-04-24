@@ -38,7 +38,7 @@ const ShowProperty: React.FC<childProps> = ({
         <h6
           style={{ marginTop: "10px", fontSize: "larger", fontWeight: "700" }}
         >
-         Property Details
+          Your Property Details
         </h6>
         <p>
           <span style={{ fontSize: "16px", fontWeight: "bold" }}>
@@ -66,16 +66,7 @@ const ShowProperty: React.FC<childProps> = ({
           Amenities:{" "}
         </span>
         <AmenitiesList />
-        <Button
-          variant="contained"
-          style={{ backgroundColor: "#FDA117" }}
-          onClick={() => {
-            // Implement the reservation logic or navigation here
-            console.log("Reserve button clicked");
-          }}
-        >
-          Reserve
-        </Button>
+     
       </Grid>
     </>
   );

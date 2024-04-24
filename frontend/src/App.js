@@ -26,6 +26,9 @@ import Dashboard from "./components/Dashboard/Dashboard.tsx";
 import PropertReservation from "./components/Dashboard/PropertyReservation.tsx";
 import Hprofile from "./components/HostProfile/hprofile.tsx";
 import Property1 from "./components/HostProfile/Property1.tsx";
+import Property2 from "./components/HostProfile/Property2.tsx";
+import Property3 from "./components/HostProfile/Property3.tsx";
+import PadMap from "./components/Dashboard/Map.tsx";
 import Css from "./App.css"
 
 const properties = [
@@ -58,6 +61,14 @@ function App() {
           <Route path="/" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+
+          <Route path="/hostprofile" element={<Hprofile />}></Route>
+          <Route path="/property1info" element={<Property1 />}></Route>
+          <Route path="/property2info" element={<Property2 />}></Route>
+          <Route path="/property3info" element={<Property3 />}></Route>
+          <Route path="/map" element={<PadMap />}></Route>
           <Route path="/propertyinfo" element={<Property1 />}></Route>
           <Route path="/hostprofile" element={<Hprofile />}></Route>
           <Route path="/propertyreservation" element={<PropertReservation />}></Route>

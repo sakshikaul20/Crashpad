@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
@@ -40,15 +40,26 @@ const DrawerHeader = styled('div')({
 });
 
 const SideNav: React.FC = () => {
+
+  const navigate = useNavigate(); // hook to access the navigation function
+
+  const handleLogin = () => {
+    navigate('/dashboard'); 
+  };
+  
   return (
     <Drawer
       variant="permanent"
       anchor="left"
+
+
+      
       // sx={{
       //   width: 240,
       //   '& .MuiDrawer-paper': { width: 140, boxSizing: 'border-box' },
       // }}
     >
+      
       <DrawerHeader>
         {/* <img src={logoImage} alt="Logo" style={{ maxWidth: '100%', maxHeight: '100px' }} /> */}
         <img src={logoImage} alt="Logo" style={{ width: '80px', maxHeight: '80px' }} />
@@ -56,7 +67,7 @@ const SideNav: React.FC = () => {
       <Divider />
       <List>
         {/* Dashboard Link */}
-        <StyledListItem  components={Link} to="/dashboard">
+        <StyledListItem components={Link} to="/dashboard" onClick={handleLogin}>
           <StyledListItemIcon>
             <DashboardIcon />
           </StyledListItemIcon>

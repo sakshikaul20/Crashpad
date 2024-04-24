@@ -13,6 +13,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Link } from "react-router-dom";
 import SideNav from "../NavBar/SideNav.tsx";
+import ReservationCard from "./ReservationCard.tsx";
 
 const SideBySide = styled("div")({
   display: "flex",
@@ -31,13 +32,13 @@ interface UserFormState {
 
 const PropertyReseravtion: React.FC = () => {
   const [propertyFormData, setPropertyFormData] = useState<UserFormState>({
-    location: "Hidden Escape",
+    location: "Teton Frontier Camp",
     address: "123 Main St",
     city: "Cityville",
-    state: "CA",
-    zip: 12345,
+    state: "WY",
+    zip: 43901,
     about: "wifi",
-    hourlyrate: 22,
+    hourlyrate: 100,
   });
 
   const [errors, setErrors] = useState<any>();
@@ -120,14 +121,16 @@ const PropertyReseravtion: React.FC = () => {
           <Grid xs={3}>
             <img
               src={HiddenEscape}
-              style={{ width: "100%", borderRadius: "20px", height: "400px" }}
+              style={{ width: "120%", borderRadius: "20px", height: "400px" }}
             />
           </Grid>
           {ShowProperty ? (
+            <Box sx={{ flexGrow: 1, m: 4, paddingLeft: "6em" }}>
             <PropertyForm
               profileFormData={propertyFormData}
               onClickEdit={handleShowProperty}
-            ></PropertyForm>
+            />
+            </Box>
           ) : (
             <Grid sx={{ mr: 2, ml: 2 }}>
               <form noValidate autoComplete="off" onSubmit={propertySubmitData}>
@@ -205,13 +208,14 @@ const PropertyReseravtion: React.FC = () => {
               </form>
             </Grid>
           )}
-          <Calendar
+          <ReservationCard />
+          {/* <Calendar
             events={events}
             startAccessor="start"
             endAccessor="end"
             selectable
-            style={{ height: "400px", paddingLeft: "200px"  }}
-          />
+            style={{ height: "400px", paddingLeft: "100px"  }}
+          /> */}
         </Grid>
       </Box>
 
