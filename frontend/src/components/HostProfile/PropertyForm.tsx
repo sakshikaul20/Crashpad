@@ -57,7 +57,7 @@ const ShowProperty: React.FC<childProps> = ({
         </p>
         <p>
           <span style={{ fontSize: "16px", fontWeight: "bold" }}>
-            Hourly Rate:{" "}
+            Nightly Rate:{" "}
           </span>{" "}
           ${profileFormData.hourlyrate}
         </p>

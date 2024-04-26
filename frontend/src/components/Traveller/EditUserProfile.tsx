@@ -10,8 +10,9 @@ import Select from '@mui/material/Select';
 import { FlashOffOutlined } from "@mui/icons-material";
 // import ResponsiveAppBar from "../Navbar";
 import Nav from '../NavBar/SideNav.tsx';
-import Header from '../Traveller/TravellerHeaderSetting.tsx';
+
 import Myprofile from '../../images/myprofile.jpeg';
+import UserSettings from "../Dashboard/UserSettings.tsx";
 
 
 
@@ -38,12 +39,12 @@ interface UserFormState {
 const UserProfile: React.FC = () => {
 
     const [profileFormData, setProfileFormData] = useState<UserFormState>({
-        userName: "Jon",
-        firstName: "Jon",
-        lastName: "Deo",
+        userName: "Kenson",
+        firstName: "Kenson",
+        lastName: "Pribyl",
         age: 30,
         gender: "Male",
-        aboutMe: "I love travelling different places!"
+        aboutMe: "I love traveling different places!"
     });
     
     const [errors, setErrors] = useState<any>();
@@ -104,7 +105,7 @@ const UserProfile: React.FC = () => {
 
     return (
         <>
-        <Header />;
+         <UserSettings/>
         <Nav/>
           <Grid container spacing={2} marginTop= {'1em'} marginLeft= {'7em'} >
               <Grid xs={4} >

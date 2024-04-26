@@ -39,11 +39,11 @@ const ShowAccomodation:React.FC = () => {
         <>
         <Grid container spacing={2}>
             <Grid xs={4} >
-                <img src={RVimage} style={{ width: "100%", borderRadius: "20px" }} />
+                <img src={RVimage} style={{ width: "100%", borderRadius: "20px", }} />
                   
             </Grid>
             <Grid sx={{ mr:2,ml:2 }} >
-                <h6 style={{ marginTop: '10px', fontSize: 'larger', fontWeight: '700' }}>Your Accommodation Details</h6>
+                <h6 style={{ marginTop: '10px', fontSize: 'larger', fontWeight: '700' }}>Your Accommodation</h6>
                 <p><span style={{ fontSize: '16px',fontWeight: 'bold' }}>Type: </span>{accoFormData.type}</p>
                 <div style={{ display:'flex','justifyContent': 'space-between' }}>
                 <p><span style={{ fontSize: '16px',fontWeight: 'bold' }}>Length: </span> {accoFormData.length} ft</p>

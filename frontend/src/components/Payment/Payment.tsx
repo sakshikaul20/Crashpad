@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import CardPaymentImage from '../../images/rvpark4.jpeg';
+import CardPaymentImage from '../../images/rvpark1.jpg';
 import Mastercard from '../../images/mastercard.png';
 import Visacard from '../../images/visacard.jpg';
 import Debitcard from '../../images/debitcard.jpeg';
@@ -45,16 +45,16 @@ const Payment: React.FC = () => {
                             <Typography color="gray" sx={{ textAlign: 'center', textDecoration: 'underline' }}>Cardmember Service
                                                                                                                PO Box 790444
                                                                                                             SLC, UT 84555-0408</Typography>
-                            <Typography variant='h5' sx={{ pt: 5, textDecoration: 'underline' }}>$160.00</Typography>
+                            <Typography variant='h5' sx={{ pt: 5, textDecoration: 'underline' }}>$60.00</Typography>
                             <Divider sx={{ pt: 2 }} />
                             <Stack direction="row" flexDirection="row" justifyContent="space-between" alignItems="center" sx={{ pt: 3 }} >
                                 <Typography color="gray">Total</Typography>
-                                <Typography color="gray">$160.00</Typography>
+                                <Typography color="gray">$45.00</Typography>
                             </Stack>
                             <Divider />
                             <Stack direction="row" flexDirection="row" justifyContent="space-between" alignItems="center"  >
                                 <Typography color="gray">Taxes and Charges</Typography>
-                                <Typography color="gray">$160.00</Typography>
+                                <Typography color="gray">$10.00</Typography>
                             </Stack>
                             <Divider />
 
@@ -62,7 +62,7 @@ const Payment: React.FC = () => {
                             <Divider />
                             <Stack direction="row" flexDirection="row" justifyContent="space-between" alignItems="center"  >
                                 <Typography >Bill Total</Typography>
-                                <Typography >$185.00</Typography>
+                                <Typography >$55.00</Typography>
                             </Stack>
                             <Divider />
                         </Grid>

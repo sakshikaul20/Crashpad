@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
 import { TextField, Button, Typography } from "@mui/material";
-import HiddenEscape from "../../images/HiddenEscape.jpg";
-import Lot6 from "../../images/Lot6.jpg";
-import Lot7 from "../../images/Lot7.jpg";
+import HiddenEscape from "../../images/rvpark1.jpg";
+import Lot5 from "../../images/Lot6.jpg";
+import Lot6 from "../../images/pimg.jpg";
+import Lot7 from "../../images/pi.jpg";
+import Lot8 from "../../images/pimage.jpg";
+import Lot9 from "../../images/pif.jpg";
 import Grid from "@mui/material/Grid";
 import PropertyForm from "../HostProfile/PropertyForm.tsx";
 import Calendar from "../HostProfile/Calendar.tsx";
@@ -14,6 +17,7 @@ import CardMedia from "@mui/material/CardMedia";
 import { Link } from "react-router-dom";
 import SideNav from "../NavBar/SideNav.tsx";
 import ReservationCard from "./ReservationCard.tsx";
+import UserSettings from "./UserSettings.tsx";
 
 const SideBySide = styled("div")({
   display: "flex",
@@ -32,13 +36,13 @@ interface UserFormState {
 
 const PropertyReseravtion: React.FC = () => {
   const [propertyFormData, setPropertyFormData] = useState<UserFormState>({
-    location: "Teton Frontier Camp",
+    location: "Teton Frontier Park",
     address: "123 Main St",
     city: "Cityville",
     state: "WY",
     zip: 43901,
     about: "wifi",
-    hourlyrate: 100,
+    hourlyrate: 45,
   });
 
   const [errors, setErrors] = useState<any>();
@@ -115,6 +119,7 @@ const PropertyReseravtion: React.FC = () => {
 
   return (
     <>
+      <UserSettings />
       <SideNav />
       <Box sx={{ flexGrow: 1, m: 4, paddingLeft: "6em" }}>
         <Grid container spacing={2}>
@@ -233,6 +238,17 @@ const PropertyReseravtion: React.FC = () => {
           <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
             <CardMedia
               sx={{ height: 220, width: 250 }}
+              image={Lot5}
+              title="green iguana"
+            />
+          </Card>
+        </Link>
+        <Link to="../property2">
+          {" "}
+          {/* Link to the desired component */}
+          <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
+            <CardMedia
+              sx={{ height: 220, width: 250 }}
               image={Lot6}
               title="green iguana"
             />
@@ -255,7 +271,7 @@ const PropertyReseravtion: React.FC = () => {
           <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
             <CardMedia
               sx={{ height: 220, width: 250 }}
-              image={Lot6}
+              image={Lot8}
               title="green iguana"
             />
           </Card>
@@ -266,23 +282,13 @@ const PropertyReseravtion: React.FC = () => {
           <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
             <CardMedia
               sx={{ height: 220, width: 250 }}
-              image={Lot6}
-              title="green iguana"
-            />
-          </Card>
-        </Link>
-        <Link to="../property2">
-          {" "}
-          {/* Link to the desired component */}
-          <Card sx={{ maxWidth: 500, maxHeight: 500 }}>
-            <CardMedia
-              sx={{ height: 220, width: 250 }}
-              image={Lot6}
+              image={Lot9}
               title="green iguana"
             />
           </Card>
         </Link>
       </div>
+     
     </>
   );
 };

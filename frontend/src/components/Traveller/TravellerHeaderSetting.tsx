@@ -73,7 +73,7 @@ const UserSettings = () => {
           {" "}
           {/* This centers the elements to the right */}
           <Typography variant="subtitle1" sx={{ marginRight: "5px" }}>
-            Hello! Joe
+            Hello! Kenson
           </Typography>
           <IconButton
             onClick={handleMenu}

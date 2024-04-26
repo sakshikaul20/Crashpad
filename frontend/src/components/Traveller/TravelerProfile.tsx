@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid';
 import BasicTabs from "./CustomTabs.tsx";
 import ShowAccomodation from "./ShowAccomodation.tsx";
 import ShowUserProfile from "./ShowUserProfile.tsx";
-import Header from '../Traveller/TravellerHeaderSetting.tsx';
 import { Link, useNavigate } from 'react-router-dom';
+import UserSettings from "../Dashboard/UserSettings.tsx";
 
 
 
@@ -17,7 +17,7 @@ const Booking: React.FC = () => {
 
     return (
         <>
-        <Header/>
+        <UserSettings/>
           <Nav/>
           <Box sx={{ flexGrow: 1, m:5, marginLeft: '8em'}} >
               <Grid container spacing={1}>

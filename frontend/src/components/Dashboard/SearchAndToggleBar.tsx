@@ -83,18 +83,6 @@ const SearchAndToggleBar = () => {
         onChange={handleToggle}
         sx={toggleStyle}
       >
-        <ToggleButton
-          value="pool"
-          aria-label="pool"
-          sx={{
-            "&.Mui-selected, &.Mui-selected:hover": {
-              backgroundColor: "darkorange",
-              color: "white",
-            },
-          }}
-        >
-          <PoolIcon />
-        </ToggleButton>
 
         <ToggleButton
           value="baths"

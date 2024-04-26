@@ -11,17 +11,6 @@ import MoreInfoModal from './MoreInfoModal.tsx';
 import { useNavigate } from 'react-router-dom';
 import properties from './properties.js';
 
-
-
-// const properties = Array(12).fill({
-//   title: "YS, Teton",
-//   distance: "2,776 kilometers away",
-//   dateRange: "23-28 June",
-//   price: "$100",
-//   imageUrl: cardImage,
-//   isNew: true,
-//   rating: "4.9",
-// });
 const DetailedModal = ({ property, open, onClose }) => {
 
   return (
@@ -91,16 +80,6 @@ const PropertyCard = ({ property }) => {
   );
 };
 
-
-// const PropertyGrid = () => (
-//   <Grid container spacing={2} sx={{ paddingTop: '16px', paddingLeft: '100px' }}> {/* Adjust paddingLeft according to the width of the side navigation panel */}
-//     {properties.map((property, index) => (
-//       <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
-//         <PropertyCard property={property} />
-//       </Grid>
-//     ))}
-//   </Grid>
-// );
 const PropertyGrid = () => {
   const [selectedProperty, setSelectedProperty] = useState(null); // Track the selected property
   const [modalOpen, setModalOpen] = useState(false); // Track if the modal is open

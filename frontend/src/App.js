@@ -65,9 +65,7 @@ function App() {
           <Route path="/" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
-
-          <Route path="/dashboard" element={<Dashboard />}></Route>
-
+          <Route path="/login" element={<Login />}></Route>
           <Route path="/hostprofile" element={<Hprofile />}></Route>
           <Route path="/property1info" element={<Property1 />}></Route>
           <Route path="/property2info" element={<Property2 />}></Route>

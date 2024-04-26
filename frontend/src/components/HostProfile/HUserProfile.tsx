@@ -119,12 +119,13 @@ const HUserProfile: React.FC = () => {
         <>
           <Grid container spacing={2}>
               <Grid xs={3} >
-                  <img src={ProfileImg}  style={{ width: "100%", borderRadius: "20px" }} />
+                  <img src={ProfileImg}  style={{width: "150%", borderRadius: "20px", height: "400px" }} />
                   
               </Grid>
-              {
-              showUserProfile ? 
-              (<HostForm profileFormData={profileFormData}  onClickEdit={handleShowProfile}></HostForm>) : 
+              <Grid sx={{ flexGrow: 1, m: 4, paddingLeft: "3em" }}> {/* adjust the value of padding as needed */}
+        {showUserProfile ? (
+          <HostForm profileFormData={profileFormData} onClickEdit={handleShowProfile} />
+        ) :
               (<Grid sx={{ mr:2,ml:2 }} >
                 <Button onClick={handleShowProfile}>Edit</Button>
                 <Modal open={showProfileModal} onClose={() => setShowProfileModal(false)}>
@@ -250,7 +251,7 @@ const HUserProfile: React.FC = () => {
                       
                   </Typography>
                   </form>
-              </Grid>)}
+              </Grid>)}</Grid>
           </Grid>
         </>
     );

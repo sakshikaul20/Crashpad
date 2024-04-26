@@ -19,7 +19,7 @@ const Favourite: React.FC = () => {
     return (
         <>
         <div style={{ display:'flex',gap:'8px' }}>
-        <Card  sx={{ maxWidth: 200 }}>
+        <Card  sx={{ maxWidth: 400 }}>
             <CardMedia
                 sx={{ height: 150}}
                 image={crashPadImg1}
@@ -37,7 +37,7 @@ const Favourite: React.FC = () => {
                 </Typography>
             </CardContent>
              </Card>
-             <Card  sx={{ maxWidth: 200 }}>
+             <Card  sx={{ maxWidth: 400 }}>
             <CardMedia
                 sx={{ height: 150 }}
                 image={crashPadImg2}
@@ -55,7 +55,7 @@ const Favourite: React.FC = () => {
                 </Typography>
             </CardContent>
         </Card>
-        <Card  sx={{ maxWidth: 200 }}>
+        <Card  sx={{ maxWidth: 400 }}>
             <CardMedia
                 sx={{ height: 150 }}
                 image={crashPadImg3}
@@ -73,7 +73,7 @@ const Favourite: React.FC = () => {
                 </Typography>
             </CardContent>
         </Card>
-        <Card  sx={{ maxWidth: 200 }}>
+        <Card  sx={{ maxWidth: 400 }}>
             <CardMedia
                 sx={{ height: 150 }}
                 image={crashPadImg4}
@@ -92,7 +92,7 @@ const Favourite: React.FC = () => {
             </CardContent>
             
         </Card>
-        <Card  sx={{ maxWidth: 200 }}>
+        <Card  sx={{ maxWidth: 400 }}>
             <CardMedia
                 sx={{ height: 150}}
                 image={crashPadImg5}

@@ -35,7 +35,7 @@ const ReservationCard = () => {
     <CustomCard>
       <CardContent>
         <Typography variant="h5" gutterBottom>
-          $100/night
+          $45/night
         </Typography>
         <TextField
           size="small"
@@ -75,19 +75,19 @@ const ReservationCard = () => {
           fullWidth
         >
           <CustomToggleButton value="non-refundable">
-            Non-refundable Total• $240 
+            Non-refundable Total• $45 
           </CustomToggleButton>
           <CustomToggleButton value="refundable">
-            Refundable Total • $230 
+            Refundable Total • $55 
           </CustomToggleButton>
         </ToggleButtonGroup>
         <Typography variant="body1" sx={{ marginTop: '10px' }}>
-          Total after taxes $255 total
+          Total after taxes $60 total
         </Typography>
         <Button
           size="small"
           variant="contained"
-          sx={{ backgroundColor: '#FDA117', marginTop: '20px' }}
+          style={{ backgroundColor: '#FDA117' }}
           fullWidth
           onClick={handlereservecrashpad}
           

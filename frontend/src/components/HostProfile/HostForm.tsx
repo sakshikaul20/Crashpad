@@ -25,7 +25,7 @@ const ShowUserProfile:React.FC<childProps> = ({profileFormData, onClickEdit   })
     return (
         <>
         <Grid sx={{ mr:2,ml:2 }} >
-            <h6 style={{ marginTop: '10px', fontSize: 'larger', fontWeight: '700' }}>Your Profile Detail</h6>
+            {/* <h6 style={{ marginTop: '10px', fontSize: 'larger', fontWeight: '700' }}>Your Profile Detail</h6> */}
             <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>User Name: </span>{profileFormData.userName}</p>
             <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>Name: </span>{profileFormData.firstName} {profileFormData.lastName}</p>
             <p><span style={{ fontSize: '16px', fontWeight: 'bold' }}>Gender: </span> {profileFormData.gender} </p>
