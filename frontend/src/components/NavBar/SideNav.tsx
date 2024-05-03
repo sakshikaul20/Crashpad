@@ -1,68 +1,52 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Drawer, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import EmailIcon from '@mui/icons-material/Email';
-import EventIcon from '@mui/icons-material/Event';
-import SettingsIcon from '@mui/icons-material/Settings';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import { styled } from '@mui/material/styles';
-
-// Import your logo image here
-import logoImage from '../../images/CPlogo.png';
-
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  Drawer,
+  List,
+  ListItem,
+  ListItemIcon,
+  Divider,
+} from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import EmailIcon from "@mui/icons-material/Email";
+import EventIcon from "@mui/icons-material/Event";
+import SettingsIcon from "@mui/icons-material/Settings";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import { styled } from "@mui/material/styles";
+import logoImage from "../../images/CPlogo.png";
 
 const StyledListItem = styled(ListItem)({
-    justifyContent: 'center',
-    // '& .MuiListItemIcon-root' : {
-    //   minWidth: 'initial'
-    // }
+  justifyContent: "center",
+});
 
-  });
-  
 const StyledListItemIcon = styled(ListItemIcon)({
-    // justifyContent: 'center', // Center horizontally in the flex container
-    // minWidth: '0', // Override Material-UI's default minWidth
-    // marginRight: '55px', // This combined with marginLeft auto will center the icon
-    // marginLeft: '55px',
-    minWidth: 'initial',
-    padding: '10px'
+  minWidth: "initial",
+  padding: "10px",
+});
 
-  });
-
-const DrawerHeader = styled('div')({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: '8px'
+const DrawerHeader = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "8px",
 });
 
 const SideNav: React.FC = () => {
-
-  const navigate = useNavigate(); // hook to access the navigation function
+  const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/dashboard'); 
+    navigate("/dashboard");
   };
-  
+
   return (
-    <Drawer
-      variant="permanent"
-      anchor="left"
-
-
-      
-      // sx={{
-      //   width: 240,
-      //   '& .MuiDrawer-paper': { width: 140, boxSizing: 'border-box' },
-      // }}
-    >
-      
+    <Drawer variant="permanent" anchor="left">
       <DrawerHeader>
-        {/* <img src={logoImage} alt="Logo" style={{ maxWidth: '100%', maxHeight: '100px' }} /> */}
-        <img src={logoImage} alt="Logo" style={{ width: '80px', maxHeight: '80px' }} />
+        <img
+          src={logoImage}
+          alt="Logo"
+          style={{ width: "80px", maxHeight: "80px" }}
+        />
       </DrawerHeader>
       <Divider />
       <List>
@@ -73,32 +57,31 @@ const SideNav: React.FC = () => {
           </StyledListItemIcon>
           {/* <ListItemText primary="Dashboard" /> */}
         </StyledListItem>
-        {/* Other Links */}
-        <StyledListItem >
+        <StyledListItem>
           <StyledListItemIcon>
             <HomeIcon />
           </StyledListItemIcon>
           {/* <ListItemText primary="Home" /> */}
         </StyledListItem>
-        <StyledListItem >
+        <StyledListItem>
           <StyledListItemIcon>
             <FavoriteIcon />
           </StyledListItemIcon>
           {/* <ListItemText primary="Favorites" /> */}
         </StyledListItem>
-        <StyledListItem >
+        <StyledListItem>
           <StyledListItemIcon>
             <EmailIcon />
           </StyledListItemIcon>
           {/* <ListItemText primary="Messages" /> */}
         </StyledListItem>
-        <StyledListItem >
+        <StyledListItem>
           <StyledListItemIcon>
             <EventIcon />
           </StyledListItemIcon>
           {/* <ListItemText primary="Trips" /> */}
         </StyledListItem>
-        <StyledListItem >
+        <StyledListItem>
           <StyledListItemIcon>
             <SettingsIcon />
           </StyledListItemIcon>

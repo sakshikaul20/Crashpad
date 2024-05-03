@@ -95,12 +95,7 @@ const PropertyReseravtion: React.FC = () => {
     setPropertyFormData({ ...propertyFormData, [name]: value });
   };
 
-  // const handleChanges = (event: SelectChangeEvent) => {
-  //   setAge(event.target.value as string);
-  // };
-
   const handleShowProperty = () => {
-    // alert("Show profile");
     setShowProperty(true);
   };
 
@@ -110,11 +105,10 @@ const PropertyReseravtion: React.FC = () => {
       start: new Date(2024, 3, 14),
       end: new Date(2024, 3, 20),
     },
-    // Add more events as needed
   ];
 
   const navigateToHprofile = () => {
-    window.location.href = "/hprofile"; // Change the window location to navigate to hprofile page
+    window.location.href = "/hprofile";
   };
 
   return (
@@ -131,10 +125,10 @@ const PropertyReseravtion: React.FC = () => {
           </Grid>
           {ShowProperty ? (
             <Box sx={{ flexGrow: 1, m: 4, paddingLeft: "6em" }}>
-            <PropertyForm
-              profileFormData={propertyFormData}
-              onClickEdit={handleShowProperty}
-            />
+              <PropertyForm
+                profileFormData={propertyFormData}
+                onClickEdit={handleShowProperty}
+              />
             </Box>
           ) : (
             <Grid sx={{ mr: 2, ml: 2 }}>
@@ -196,31 +190,10 @@ const PropertyReseravtion: React.FC = () => {
                     helperText={errors ? errors.zip : ""}
                   />
                 </SideBySide>
-                {/* <TextField
-                  fullWidth
-                  placeholder="Tell me about the property..."
-                  multiline
-                  margin="normal"
-                  id="about"
-                  label="About"
-                  variant="outlined"
-                  name="about"
-                  value={propertyFormData.about}
-                  onChange={handleChange}
-                  rows={4}
-                  helperText={errors ? errors.about : ""}
-                /> */}
               </form>
             </Grid>
           )}
           <ReservationCard />
-          {/* <Calendar
-            events={events}
-            startAccessor="start"
-            endAccessor="end"
-            selectable
-            style={{ height: "400px", paddingLeft: "100px"  }}
-          /> */}
         </Grid>
       </Box>
 
@@ -229,7 +202,6 @@ const PropertyReseravtion: React.FC = () => {
           display: "flex",
           gap: "40px",
           paddingLeft: "110px",
-          
         }}
       >
         <Link to="../Crash">
@@ -288,7 +260,6 @@ const PropertyReseravtion: React.FC = () => {
           </Card>
         </Link>
       </div>
-     
     </>
   );
 };

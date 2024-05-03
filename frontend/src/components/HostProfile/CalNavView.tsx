@@ -1,4 +1,4 @@
-// NavigationView.js
+
 import React from 'react';
 
 const NavigationView = ({ onNavigate }) => {

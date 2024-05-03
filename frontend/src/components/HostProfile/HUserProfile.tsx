@@ -122,7 +122,7 @@ const HUserProfile: React.FC = () => {
                   <img src={ProfileImg}  style={{width: "150%", borderRadius: "20px", height: "400px" }} />
                   
               </Grid>
-              <Grid sx={{ flexGrow: 1, m: 4, paddingLeft: "3em" }}> {/* adjust the value of padding as needed */}
+              <Grid sx={{ flexGrow: 1, m: 4, paddingLeft: "3em" }}> 
         {showUserProfile ? (
           <HostForm profileFormData={profileFormData} onClickEdit={handleShowProfile} />
         ) :
@@ -131,7 +131,6 @@ const HUserProfile: React.FC = () => {
                 <Modal open={showProfileModal} onClose={() => setShowProfileModal(false)}>
                   <div style={{ backgroundColor: 'white', padding: 20 }}>
                     <Typography variant="h6">Edit Profile</Typography>
-                  {/* Add your form or any other content here */}
                     <TextField
                       fullWidth
                       margin="normal"
@@ -143,7 +142,6 @@ const HUserProfile: React.FC = () => {
                       onChange={handleChange}
                       helperText={errors ? errors.userName : ""}
                     />
-                  {/* Other form fields */}
                   </div>
                 </Modal>
               <form noValidate autoComplete="off" onSubmit={profileSubmitData}>

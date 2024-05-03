@@ -1,25 +1,32 @@
-import React from 'react';
-import { Card, CardContent, Typography, TextField, ToggleButtonGroup, ToggleButton, Button } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import {
+  Card,
+  CardContent,
+  Typography,
+  TextField,
+  ToggleButtonGroup,
+  ToggleButton,
+  Button,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
 const CustomCard = styled(Card)({
   maxWidth: 400,
-  margin: 'auto',
-  marginTop: '0px',
-  height: "400px"
+  margin: "auto",
+  marginTop: "0px",
+  height: "400px",
 });
 
 const CustomToggleButton = styled(ToggleButton)({
-  '&.Mui-selected, &.Mui-selected:hover': {
-    color: 'white',
-    backgroundColor: '#FDA117',
+  "&.Mui-selected, &.Mui-selected:hover": {
+    color: "white",
+    backgroundColor: "#FDA117",
   },
 });
 
 const ReservationCard = () => {
-  // State for selected cancellation policy
-  const [cancellation, setCancellation] = React.useState('non-refundable');
+  const [cancellation, setCancellation] = React.useState("non-refundable");
 
   const handleCancellationChange = (event, newCancellation) => {
     if (newCancellation !== null) {
@@ -28,7 +35,7 @@ const ReservationCard = () => {
   };
   const navigate = useNavigate();
   const handlereservecrashpad = () => {
-    navigate('/payment'); 
+    navigate("/payment");
   };
 
   return (
@@ -42,7 +49,7 @@ const ReservationCard = () => {
           label="Check-in"
           type="date"
           defaultValue="2024-06-23"
-          sx={{ marginRight: '10px', width: 'calc(50% - 10px)' }}
+          sx={{ marginRight: "10px", width: "calc(50% - 10px)" }}
           InputLabelProps={{ shrink: true }}
         />
         <TextField
@@ -50,10 +57,10 @@ const ReservationCard = () => {
           label="Check-out"
           type="date"
           defaultValue="2024-06-23"
-          sx={{ width: 'calc(50% - 10px)' }}
+          sx={{ width: "calc(50% - 10px)" }}
           InputLabelProps={{ shrink: true }}
         />
-        <Typography variant="body1" sx={{ marginTop: '10px' }}>
+        <Typography variant="body1" sx={{ marginTop: "10px" }}>
           Guests
         </Typography>
         <TextField
@@ -61,7 +68,7 @@ const ReservationCard = () => {
           type="number"
           defaultValue={1}
           InputProps={{ inputProps: { min: 1 } }}
-          sx={{ width: '100px', marginBottom: '20px' }}
+          sx={{ width: "100px", marginBottom: "20px" }}
         />
         <Typography variant="body1" gutterBottom>
           Cancellation Policies
@@ -75,26 +82,24 @@ const ReservationCard = () => {
           fullWidth
         >
           <CustomToggleButton value="non-refundable">
-            Non-refundable Total• $45 
+            Non-refundable Total• $45
           </CustomToggleButton>
           <CustomToggleButton value="refundable">
-            Refundable Total • $55 
+            Refundable Total • $55
           </CustomToggleButton>
         </ToggleButtonGroup>
-        <Typography variant="body1" sx={{ marginTop: '10px' }}>
+        <Typography variant="body1" sx={{ marginTop: "10px" }}>
           Total after taxes $60 total
         </Typography>
         <Button
           size="small"
           variant="contained"
-          style={{ backgroundColor: '#FDA117' }}
+          style={{ backgroundColor: "#FDA117" }}
           fullWidth
           onClick={handlereservecrashpad}
-          
         >
           Reserve
         </Button>
-        
       </CardContent>
     </CustomCard>
   );

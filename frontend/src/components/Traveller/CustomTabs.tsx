@@ -1,11 +1,11 @@
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import CurrentBooking from '../Traveller/CurrentBooking.tsx';
-import Favourite from '../Traveller/Favourite.tsx';
-import PastBooking from '../Traveller/PastBooking.tsx';
+import * as React from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import CurrentBooking from "../Traveller/CurrentBooking.tsx";
+import Favourite from "../Traveller/Favourite.tsx";
+import PastBooking from "../Traveller/PastBooking.tsx";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -33,11 +33,10 @@ function CustomTabPanel(props: TabPanelProps) {
   );
 }
 
-
 function a11yProps(index: number) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -49,22 +48,26 @@ export default function BasicTabs() {
   };
 
   return (
-    <Box sx={{ width: '100%', marginTop:'35px' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+    <Box sx={{ width: "100%", marginTop: "35px" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
           <Tab label="Favorited" {...a11yProps(0)} />
           <Tab label="Current Booking" {...a11yProps(1)} />
           <Tab label="Past Stays" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <Favourite/>
+        <Favourite />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-      <CurrentBooking/>
+        <CurrentBooking />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-      <PastBooking/>
+        <PastBooking />
       </CustomTabPanel>
     </Box>
   );

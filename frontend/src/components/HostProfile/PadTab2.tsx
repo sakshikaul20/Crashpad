@@ -16,7 +16,6 @@ const PadTwo: React.FC = () => {
             start: new Date(2024, 3, 14),
             end: new Date(2024, 3, 20),
         }
-        // Add more events as needed
     ];
 
     return (
@@ -41,7 +40,6 @@ const PadTwo: React.FC = () => {
                     </CardContent>
                 </Card>
             </Link>
-            {/* Calendar component */}
             <Calendar
                 events={events}
                 startAccessor="start"

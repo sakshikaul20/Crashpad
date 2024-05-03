@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import { styled } from '@mui/material/styles';
 import { TextField, Button, Typography  } from '@mui/material';
-// import { Card, Container, dividerClasses} from '@mui/material'; 
-// import { useHistory } from 'react-router-dom';
 import UserSettings from '../Dashboard/UserSettings.tsx';
 import Lot9 from '../../images/Lot9.jpg';
 import Lot10 from '../../images/Lot10.jpg';
@@ -102,14 +100,7 @@ const Property3: React.FC = () => {
 
         setPropertyFormData({...propertyFormData, [name]:value});
       }
-
-      // const handleChanges = (event: SelectChangeEvent) => {
-      //   setAge(event.target.value as string);
-      // };
-    
-
       const handleShowProperty = () => {
-        // alert("Show profile");
         setShowProperty(true);
       }
 
@@ -119,13 +110,12 @@ const Property3: React.FC = () => {
             start: new Date(2024, 3, 1),
             end: new Date(2024, 3, 20),
         }
-        // Add more events as needed
     ];
 
 
 
     const navigateToHprofile = () => {
-        window.location.href = '/hostprofile'; // Change the window location to navigate to hprofile page
+        window.location.href = '/hostprofile'; 
     };
 
     return (   
@@ -216,14 +206,6 @@ const Property3: React.FC = () => {
                             helperText={errors ? errors.about : ""}
                         />
 
-                        {/* <LoginButton
-                            fullWidth
-                            variant="contained"
-                            style={{ backgroundColor: '#FDA117' }}
-                            onClick={profileSubmitData}
-                        >
-                            Submit
-                        </LoginButton> */}
                         <Typography variant="body2" style={{ marginTop: '1em' }}>
                             
                         </Typography>

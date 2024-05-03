@@ -17,7 +17,6 @@ const PadThree: React.FC = () => {
             start: new Date(2024, 3, 1),
             end: new Date(2024, 3, 20),
         }
-        // Add more events as needed
     ];
 
     return (

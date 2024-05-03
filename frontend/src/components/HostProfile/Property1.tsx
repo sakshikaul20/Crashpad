@@ -93,7 +93,6 @@ const Property1: React.FC = () => {
   };
 
   const handleShowProperty = () => {
-    // alert("Show profile");
     setShowProperty(true);
   };
 
@@ -103,11 +102,10 @@ const Property1: React.FC = () => {
       start: new Date(2024, 3, 21),
       end: new Date(2024, 3, 27),
     },
-    // Add more events as needed
   ];
 
   const navigateToHprofile = () => {
-    window.location.href = "/hostprofile"; // Change the window location to navigate to hprofile page
+    window.location.href = "/hostprofile";
   };
 
   return (
@@ -205,15 +203,6 @@ const Property1: React.FC = () => {
                   maxRows={4}
                   helperText={errors ? errors.about : ""}
                 />
-
-                {/* <LoginButton
-                                fullWidth
-                                variant="contained"
-                                style={{ backgroundColor: '#FDA117' }}
-                                onClick={profileSubmitData}
-                            >
-                                Submit
-                            </LoginButton> */}
                 <Typography
                   variant="body2"
                   style={{ marginTop: "1em" }}

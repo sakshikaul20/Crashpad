@@ -1,8 +1,8 @@
-import React from 'react';
-import { ToggleButton, ToggleButtonGroup } from '@mui/material';
+import React from "react";
+import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 
 const FilterButtons = () => {
-  const [alignment, setAlignment] = React.useState('25');
+  const [alignment, setAlignment] = React.useState("25");
 
   const handleAlignment = (event, newAlignment) => {
     setAlignment(newAlignment);

@@ -83,7 +83,6 @@ const SearchAndToggleBar = () => {
         onChange={handleToggle}
         sx={toggleStyle}
       >
-
         <ToggleButton
           value="baths"
           aria-label="baths"
@@ -155,7 +154,7 @@ const SearchAndToggleBar = () => {
               color: "white",
             },
             fontWeight: "bold",
-            fontSize: '1rem'
+            fontSize: "1rem",
           }}
         >
           50A
@@ -169,7 +168,7 @@ const SearchAndToggleBar = () => {
               color: "white",
             },
             fontWeight: "bold",
-            fontSize: '1rem'
+            fontSize: "1rem",
           }}
         >
           30A
@@ -183,7 +182,7 @@ const SearchAndToggleBar = () => {
               color: "white",
             },
             fontWeight: "bold",
-            fontSize: '1rem'
+            fontSize: "1rem",
           }}
         >
           15A

@@ -1,39 +1,43 @@
-import React, { useState } from 'react';
-import { Calendar as BigCalendar, Views, momentLocalizer } from 'react-big-calendar';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
-import moment from 'moment'; // Import moment library for localizing dates
-import NavigationView from './CalNavView.tsx';
+import React, { useState } from "react";
+import {
+  Calendar as BigCalendar,
+  Views,
+  momentLocalizer,
+} from "react-big-calendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import moment from "moment";
+import NavigationView from "./CalNavView.tsx";
 
-const localizer = momentLocalizer(moment); // Use moment for localizing dates
+const localizer = momentLocalizer(moment);
 
-// Define custom views object with your custom view
 const customViews = {
   navigationView: NavigationView,
 };
 
-const Calendar = ({ events, startAccessor, endAccessor, selectable, style }) => {
-  // Function to handle navigation actions
+const Calendar = ({
+  events,
+  startAccessor,
+  endAccessor,
+  selectable,
+  style,
+}) => {
   const handleNavigate = (action) => {
-    // Implement navigation logic here
     console.log(`Navigating ${action}`);
-    };
-    
+  };
 
   return (
     <div>
       <BigCalendar
-        localizer={localizer} // Pass the localizer
+        localizer={localizer}
         events={events}
         startAccessor={startAccessor}
         endAccessor={endAccessor}
         selectable={selectable}
-        style={{ height: '500px', ...style }}
+        style={{ height: "500px", ...style }}
         customViews={customViews}
-        // views={Object.values(Views)} // Pass all available views
       />
     </div>
   );
 };
 
 export default Calendar;
-

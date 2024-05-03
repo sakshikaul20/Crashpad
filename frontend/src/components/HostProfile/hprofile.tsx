@@ -21,9 +21,7 @@ const hprofile: React.FC = () => {
                   <Grid item xs={5}>
                       <HUserProfile></HUserProfile>
                   </Grid>
-                  {/* <Grid item xs={6}>
-                      <Accommodation></Accommodation>
-                  </Grid> */}
+                 
               </Grid>
             <BasicTabs></BasicTabs>
           </Box>

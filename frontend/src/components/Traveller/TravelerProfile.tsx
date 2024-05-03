@@ -1,37 +1,32 @@
 import React from "react";
-import Nav from '../NavBar/SideNav.tsx';
+import Nav from "../NavBar/SideNav.tsx";
 // import ResponsiveAppBar from './Navbar.tsx';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import BasicTabs from "./CustomTabs.tsx";
 import ShowAccomodation from "./ShowAccomodation.tsx";
 import ShowUserProfile from "./ShowUserProfile.tsx";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import UserSettings from "../Dashboard/UserSettings.tsx";
 
-
-
-
-
 const Booking: React.FC = () => {
-
-    return (
-        <>
-        <UserSettings/>
-          <Nav/>
-          <Box sx={{ flexGrow: 1, m:5, marginLeft: '8em'}} >
-              <Grid container spacing={1}>
-                  <Grid item xs={6}>
-                    <ShowUserProfile/>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <ShowAccomodation/>
-                  </Grid>
-              </Grid>
-            <BasicTabs/>
-          </Box>
-        </>
-    );
-}
+  return (
+    <>
+      <UserSettings />
+      <Nav />
+      <Box sx={{ flexGrow: 1, m: 5, marginLeft: "8em" }}>
+        <Grid container spacing={1}>
+          <Grid item xs={6}>
+            <ShowUserProfile />
+          </Grid>
+          <Grid item xs={6}>
+            <ShowAccomodation />
+          </Grid>
+        </Grid>
+        <BasicTabs />
+      </Box>
+    </>
+  );
+};
 
 export default Booking;
